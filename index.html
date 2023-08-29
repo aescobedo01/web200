@@ -1,1 +1,56 @@
-Ana Escobedo
+<!--Ana Escobedo
+WEB 200-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Escobedo WEB200</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&family=Marcellus&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div>
+            <h1>Ana Escobedo's WEB200 Assignments</h1>
+            <hr>
+            <h2>Welcome to my website!</h2>
+            <p>Here you will find a collection of assignments relating to Javascript that I have done throughout my time
+                in WEB200.</p>
+            <hr>
+            <button type="button" class="collapsible">Click to view all assignments</button>
+            <div class="content">
+                <ul>
+                    <li><a class="links" href="web200anaescobedo/index.html">Assignment 1</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
