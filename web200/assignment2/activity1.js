@@ -5,7 +5,7 @@ function returnText() {
     const calculateMonthly = hours * wage * 4;
     const calculateWeekly = hours * wage * 1;
 
-    window.alert(["Your weekly salary is " + $,{calculateWeekly} + ", your monthly salary is " + $,{calculateMonthly} + ", and your yearly salary is " + $,{calculateYearly} +"."])
+    window.alert(["Your weekly salary is " + calculateWeekly + ", your monthly salary is " + calculateMonthly + ", and your yearly salary is " + calculateYearly +"."]);
 
     //const wage = returntext();
     
