@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 2: Activity 2</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&family=Marcellus&display=swap"
+        rel="stylesheet">
     <script src="activity2.js"></script>
 </head>
+
 <body>
-    <h1>Age converter!</h1>
+    <main>
+        <div class="ageform">
+            <h1 class="whatsyourage">What is your age in months, days, hours, and seconds?</h1>
+            <input name="age" id="ageInput" type="text" placeholder="Enter current age here...">
+            <button onclick="returnText()" value="calculate" id="convertedAge">Submit</button>
+        </div>
+    </main>
+
 </body>
+
 </html>

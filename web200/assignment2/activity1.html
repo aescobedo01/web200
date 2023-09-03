@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Assignment 2: Activity 1</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&family=Marcellus&display=swap"
+        rel="stylesheet">
     <script src="activity1.js"></script>
 </head>
+
 <body>
-    <h1>What is your hourly wage?</h1>
-    <input name="wage" id="wageInput" type="text" placeholder="text">
-    <h2>How many hours do you work weekly?</h2>
-    <input name="hours" id="hoursInput" type="text" placeholder="text">
-    <button onclick="returnText()" value="calculate" id="totalSalary">Submit</button>
-    <div ></div>
+    <main>
+        <div class="divwages">
+            <h1 class="hourlywage">What is your hourly wage?</h1>
+            <input name="wage" id="wageInput" type="text" placeholder="Enter hourly wage here...">
+            <h2 class="hoursworked">How many hours do you work weekly?</h2>
+            <input name="hours" id="hoursInput" type="text" placeholder="Enter hours worked here...">
+            <button onclick="returnText()" value="calculate" id="totalSalary">Submit</button>
+        </div>
+    </main>
 </body>
+
 </html>

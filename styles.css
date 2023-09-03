@@ -60,10 +60,69 @@ div.content {
     color: #1E130A;
   }
 
-div.content:hover {
+  div.content:hover {
     background-color: #1E130A;
     color: rgb(225, 237, 219);
   }
   div.content:hover a {
     color:  rgb(225, 237, 219);
   }
+
+  /*asn2 act2*/
+  
+  #wageInput, #hoursInput, #totalSalary, .hourlywage, .hoursworked  {
+    border-radius: .5rem;
+    text-align: center;
+      padding: 10px;
+      margin: auto;
+      border: none;
+      display: inline-block;
+      width: 50%;
+  }
+
+.divwages {
+margin-left: auto;
+margin-right: auto;
+font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
+color: #1E130A;
+height: 100%;
+display: inline-block;
+text-align: center;
+}
+
+#totalSalary {
+  margin-top: 4em;
+  max-width: 150px;
+  display: block;
+}
+
+.hoursworked {
+  margin-top: 10px;
+}
+
+/*asn2 act2*/
+
+.ageform {
+  margin: center;
+  font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
+  color: #1E130A;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  }
+
+  .whatsyourage, #ageInput, #convertedAge {
+  border-radius: .5rem;
+  text-align: center;
+    padding: 10px;
+    margin: auto;
+    border: none;
+    display: inline-block;
+    width: 50%;
+}
+
+#convertedAge {
+margin-top: 4em;
+max-width: 150px;
+display: block;
+}
