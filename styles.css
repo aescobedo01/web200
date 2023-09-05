@@ -1,128 +1,94 @@
 * {
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin-top: 50px;
-    height:100%;
-    width: auto;
-    background-color: rgb(171, 182, 167);
+  background-color: rgb(171, 182, 167);
 }
 
 hr {
-    border: 0;
-    border-top: 1px solid #000;
+  border: 0;
+  border-top: 1px solid #000;
 }
 
 div {
-margin-left: 100px;
-margin-right: 100px;
-font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
-color: #1E130A;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 80px;
+  font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
+  color: #1E130A;
+  text-align: center;
+  height: 100%;
+  width: auto;
 }
 
 div.content {
- margin: 0;
+  margin: 0;
+  text-align: left;
 }
 
 /* Style the button to open and close the collapsible content */
 .collapsible {
-    background-color: rgb(117, 124, 114);
-    color: whitesmoke;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    font-family: "Marcellus", Arial, Helvetica, sans-serif;
-  }
-  
-  .active, .collapsible:hover {
-    background-color: rgb(93, 99, 91);
-  }
-  
-  .content {
-    width: 100%;
-    overflow: hidden;
-    display: none;
-    background-color: rgb(225, 237, 219);
-    font-family: "Marcellus", Arial, Helvetica, sans-serif;
-  }
-
-  a:link {
-    color: #1E130A;
-    text-decoration: none;
-  }
-
-  a:visited {
-    color: #1E130A;
-  }
-
-  div.content:hover {
-    background-color: #1E130A;
-    color: rgb(225, 237, 219);
-  }
-  div.content:hover a {
-    color:  rgb(225, 237, 219);
-  }
-
-  /*asn2 act2*/
-  
-  #wageInput, #hoursInput, #totalSalary, .hourlywage, .hoursworked  {
-    border-radius: .5rem;
-    text-align: center;
-      padding: 10px;
-      margin: auto;
-      border: none;
-      display: inline-block;
-      width: 50%;
-  }
-
-.divwages {
-margin-left: auto;
-margin-right: auto;
-font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
-color: #1E130A;
-height: 100%;
-display: inline-block;
-text-align: center;
+  background-color: rgb(117, 124, 114);
+  color: whitesmoke;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  font-family: "Marcellus", Arial, Helvetica, sans-serif;
 }
 
-#totalSalary {
+.collapsible:hover {
+  background-color: rgb(93, 99, 91);
+}
+
+.content {
+  width: 100%;
+  overflow: hidden;
+  display: none;
+  background-color: rgb(225, 237, 219);
+  font-family: "Marcellus", Arial, Helvetica, sans-serif;
+}
+
+a:link {
+  color: #1E130A;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1E130A;
+}
+
+div.content:hover {
+  background-color: #1E130A;
+  color: rgb(225, 237, 219);
+}
+
+div.content:hover a {
+  color: rgb(225, 237, 219);
+}
+
+/**/
+
+.userresponse,
+.objective,
+.buttondesign {
+  border-radius: .5rem;
+  text-align: center;
+  padding: 10px;
+  margin: auto;
+  border: none;
+  display: inline-block;
+  width: 50%;
+}
+
+.buttondesign {
   margin-top: 4em;
   max-width: 150px;
   display: block;
 }
 
-.hoursworked {
-  margin-top: 10px;
-}
-
-/*asn2 act2*/
-
-.ageform {
-  margin: center;
-  font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
-  color: #1E130A;
-  height: 100%;
-  display: inline-block;
-  text-align: center;
-  }
-
-  .whatsyourage, #ageInput, #convertedAge {
-  border-radius: .5rem;
-  text-align: center;
-    padding: 10px;
-    margin: auto;
-    border: none;
-    display: inline-block;
-    width: 50%;
-}
-
-#convertedAge {
-margin-top: 4em;
-max-width: 150px;
-display: block;
-}
+/*asn3 act3 */

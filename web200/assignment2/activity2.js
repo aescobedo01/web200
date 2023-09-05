@@ -14,10 +14,9 @@ function returnText() {
     window.alert(["Your age in months is " + calculateMonths + " months, your age in days is " + calculateDays + " days, your age in hours is " + calculateHours + " hours, and your age in seconds is " + calculateSeconds + " seconds."]);
 }
 
-/*unsure how to add the result in the console log
+/* unsure how to add the result in the console log
 
 var age = returnText();
-
 console.log("Your age in months is:", age.calculateMonths);
 console.log("Your age in days is:", age.calculateDays);
 console.log("Your age in hours is:", age.calculateHours);
