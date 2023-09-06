@@ -26,5 +26,6 @@ function rectangleArea() {
 
 // this function calls the rectangleArea function to get the value of the area of a rectangle. 
 function returnRectangle(){
+    console.log(rectangleArea());
     document.getElementById("results").innerHTML = 'The are of a rectangle is ' + rectangleArea() + '.';
 }
