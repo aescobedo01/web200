@@ -14,7 +14,7 @@ function returnText() {
     window.alert(["Your age in months is " + calculateMonths + " months, your age in days is " + calculateDays + " days, your age in hours is " + calculateHours + " hours, and your age in seconds is " + calculateSeconds + " seconds."]);
 }
 
-/* unsure how to add the result in the console log
+/* unsure how do i add the result in the console log
 
 var age = returnText();
 console.log("Your age in months is:", age.calculateMonths);

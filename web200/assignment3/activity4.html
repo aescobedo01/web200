@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3: Activity 4</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&family=Marcellus&display=swap"
+        rel="stylesheet">
+    <script src="activity4.js"></script>
+</head>
+
+<body>
+    <main>
+        <div>
+            <h1 class="objective">Area Calculator</h1>
+            <p class="objective">Please enter the dimensions for the length, width, and height below.</p>
+
+            <div>
+                <h2 class="objective">Rectangle</h2>
+                <p class="objective">Width:</p>
+                <input class="userresponse" name="widthofr" id="widthRec" type="text" placeholder="Enter width here...">
+                <p class="objective">Height:</p>
+                <input class="userresponse" name="heightofr" id="heightRec" type="text"
+                    placeholder="Enter height here...">
+            </div>
+
+
+            <div>
+                <h2 class="objective">Triangle</h2>
+                <p class="objective">Width:</p>
+                <input class="userresponse" name="widthoft" id="widthTri" type="text" placeholder="Enter width here...">
+                <p class="objective">Height:</p>
+                <input class="userresponse" name="heightoft" id="heightTri" type="text"
+                    placeholder="Enter height here...">
+            </div>
+
+            <button class="buttondesign" onclick="returnText()" value="calculate">Submit</button>
+            <div id="results"></div>
+        </div>
+    </main>
+
+</body>
+
+</html>
