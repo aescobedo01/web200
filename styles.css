@@ -74,8 +74,11 @@ div.content:hover a {
 /**/
 
 .userresponse,
-.objective,
-.buttondesign {
+.buttondesign,
+.designtemplate p,
+.designtemplate h1,
+.designtemplate h2,
+.designtemplate button {
   border-radius: .5rem;
   text-align: center;
   padding: 10px;
@@ -91,4 +94,14 @@ div.content:hover a {
   display: block;
 }
 
-/*asn3 act3 */
+.space {
+  margin-bottom: 4em;
+  display: block;
+}
+
+img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}

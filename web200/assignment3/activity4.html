@@ -19,31 +19,35 @@
 <body>
     <main>
         <div>
-            <h1 class="objective">Area Calculator</h1>
-            <p class="objective">Please enter the dimensions for the length, width, and height below.</p>
+            <h1 class="designtemplate">Area Calculator</h1>
+            <p class="designtemplate">Please enter the dimensions for the length, width, and height below.</p>
 
             <div>
-                <h2 class="objective">Rectangle</h2>
-                <p class="objective">Width:</p>
-                <input class="userresponse" name="widthofr" id="widthRec" type="text" placeholder="Enter width here..." >
-                <p class="objective">Height:</p>
-                <input class="userresponse" name="heightofr" id="heightRec" type="text"
-                    placeholder="Enter height here... " >
+                <h2 class="designtemplate">Rectangle</h2>
+                <p class="designtemplate">Width:</p>
+                <input class="userresponse" name="widthofrec" id="widthRec" type="text"
+                    placeholder="Enter width here...">
+                <p class="designtemplate">Height:</p>
+                <input class="userresponse" name="heightofrec" id="heightRec" type="text"
+                    placeholder="Enter height here... ">
             </div>
+
             <button class="buttondesign" onclick="returnRectangle()" value="calculate">Area of Rectangle</button>
+            <h3 id="result1"></h3>
+
+
             <div>
-                <h3 id="results"></h3>
-            </div>
-            <div>
-                <h2 class="objective">Triangle</h2>
-                <p class="objective">Width:</p>
-                <input class="userresponse" name="widthoft" id="widthTri" type="text" placeholder="Enter width here...">
-                <p class="objective">Height:</p>
-                <input class="userresponse" name="heightoft" id="heightTri" type="text"
+                <h2 class="designtemplate">Triangle</h2>
+                <p class="designtemplate">Width:</p>
+                <input class="userresponse" name="widthoftri" id="widthTri" type="text"
+                    placeholder="Enter width here...">
+                <p class="designtemplate">Height:</p>
+                <input class="userresponse" name="heightoftri" id="heightTri" type="text"
                     placeholder="Enter height here...">
             </div>
-            <button class="buttondesign" onclick="returnTri()" value="calculate">Area of Triangle</button>
-           
+
+            <button class="buttondesign" onclick="returnTriangle()" value="calculate">Area of Triangle</button>
+            <h3 class="space" id="result2"></h3>
 
         </div>
     </main>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4: Activity 5</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&family=Marcellus&display=swap"
+        rel="stylesheet">
+    <script src="activity5.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div>
+            <div>
+                <h1 class="designtemplate">How much flooring do I need?</h1>
+                <p class="designtemplate">Please enter the dimensions for the length and width of a room below to find
+                    the required amount of flooring.</p>
+
+                <p class="designtemplate">Width:</p>
+                <input class="userresponse" name="floorwidth" id="flooringWidth" type="text"
+                    placeholder="Enter width here...">
+                <p class="designtemplate">Length:</p>
+                <input class="userresponse" name="floorlength" id="flooringLength" type="text"
+                    placeholder="Enter length here... ">
+                <button class="buttondesign" onclick="returnText(); changeStyle();" value="calculate">Get an
+                    estimate.</button>
+            </div>
+
+            <div>
+                <h3 id="result"></h3>
+                <img class="space" id="smileyface">
+            </div>
+            <!-- Create a program that calculates the area of a room to determine the 
+            amount of floor covering required. The room is rectangular with the dimensions 
+            measured in feet with decimal fractions.
+            The output needs to be in square yards. There are 3 linear feet to a yard.[3]-->
+
+        </div>
+    </main>
+
+</body>
+
+</html>

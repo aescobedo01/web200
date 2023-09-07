@@ -8,24 +8,34 @@ include multiple shape calculations in sequence
 // this function returns the area of a rectangle only. 
 function rectangleArea() {
 
-    let widthofr = parseFloat(document.getElementById("widthRec").value);
-    let heightofr = parseFloat(document.getElementById("heightRec").value);
-    // let widthoft = parseFloat(document.getElementById("widthTri").value);
-    // let heightoft = parseFloat(document.getElementById("heightTri").value);
+    let widthofrec = parseFloat(document.getElementById("widthRec").value);
+    let heightofrec = parseFloat(document.getElementById("heightRec").value);
 
-    // const calcTri = widthoft * heightoft * .5;
-    //return widthofr * heightofr;
-    
-    // calculate area of rectangle
-    const calcRec = widthofr * heightofr;
+    const calcRec = widthofrec * heightofrec;
 
     // return area
     return calcRec; 
 
 }
 
+function triangleArea(){
+    let widthoftri = parseFloat(document.getElementById("widthTri").value);
+    let heightoftri = parseFloat(document.getElementById("heightTri").value);
+
+    const calcTri = widthoftri * heightoftri * .5;
+
+    return calcTri;
+
+}
+
+
 // this function calls the rectangleArea function to get the value of the area of a rectangle. 
 function returnRectangle(){
     console.log(rectangleArea());
-    document.getElementById("results").innerHTML = 'The are of a rectangle is ' + rectangleArea() + '.';
+    document.getElementById("result1").innerHTML = 'The area of a rectangle is ' + rectangleArea() + '.';
+}
+
+function returnTriangle() {
+    console.log(triangleArea());
+    document.getElementById("result2").innerHTML = 'The area of a triangle is ' + triangleArea() + '.';
 }
