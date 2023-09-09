@@ -9,8 +9,5 @@ function returnText() {
     const calculateFeet = miles * feet;
     const calculateInches = miles * inches;
 
-    // document.getElementById("results").innerHTML = ([miles + ' miles is equal to ' + calculateYards + ' yards, ' + calculateFeet + ' feet, or ' + calculateInches + ' inches long.']);
-    return calculateYards;
-    return calculateFeet;
-    return calculateInches;
+    document.getElementById("results").innerHTML = ([miles + ' miles is equal to ' + calculateYards + ' yards, ' + calculateFeet + ' feet, or ' + calculateInches + ' inches long.']);
 }

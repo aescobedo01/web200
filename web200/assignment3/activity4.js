@@ -11,7 +11,7 @@ function rectangleArea() {
     let widthofrec = parseFloat(document.getElementById("widthRec").value);
     let heightofrec = parseFloat(document.getElementById("heightRec").value);
 
-    const calcRec = widthofrec * heightofrec;
+    const calcRec = (widthofrec * heightofrec).toFixed(2);
 
     // return area
     return calcRec; 
@@ -22,7 +22,7 @@ function triangleArea(){
     let widthoftri = parseFloat(document.getElementById("widthTri").value);
     let heightoftri = parseFloat(document.getElementById("heightTri").value);
 
-    const calcTri = widthoftri * heightoftri * .5;
+    const calcTri = (widthoftri * heightoftri * .5).toFixed(2);
 
     return calcTri;
 

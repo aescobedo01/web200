@@ -12,8 +12,7 @@ function flooringArea(){
     const width = floorwidth / 3;
     const length = floorlength / 3;
 
-    calcFloor = width * length;
-
+    calcFloor = Math.ceil(width * length);
     return calcFloor;
 }
 

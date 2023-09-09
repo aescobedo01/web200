@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4: Activity 6</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&family=Marcellus&display=swap"
+        rel="stylesheet">
+    <script src="activity6.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div>
+            <div>
+                <h1 class="designtemplate">How much paint do I need?</h1>
+
+                <p class="designtemplate">Please enter the dimensions for the height and width of the wall to find
+                    the required amount of paint.</p>
+                <p class="designtemplate">Length (ft):</p>
+                <input class="userresponse" name="length" id="roomLength" type="text"
+                    placeholder="Enter length here...">
+                <p class="designtemplate">Width (ft):</p>
+                <input class="userresponse" name="width" id="roomWidth" type="text" placeholder="Enter width here...">
+                <p class="designtemplate">Height(ft):</p>
+                <input class="userresponse" name="height" id="roomHeight" type="text"
+                    placeholder="Enter height here... ">
+
+                <p class="designtemplate">Price per gallon of paint:</p>
+                <input class="userresponse" name="price" id="paintPrice" type="text" placeholder="Enter price here... ">
+
+                <p class="designtemplate">Square feet per gallon of paint:</p>
+                <input class="userresponse" name="coverage" id="paintCoverage" type="text"
+                    placeholder="Enter square feet here... ">
+
+                <button class="buttondesign" onclick="moneyFunction(); paintFunction();" value="calculate">Get an
+                    estimate.</button>
+
+                <div>
+                    <h3 id="paintresult"></h3>
+                    <h3 id="priceresult" class="space"></h3>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
