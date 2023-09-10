@@ -22,3 +22,8 @@ Session two was very informative for learning all about variables and expression
 Lesson 4 was very informative for learning how to use events. An event must be binded to an element and then you must pick the type of event you want to use. The function changeStyle() makes visual changes to a document. I used this particular function with the onclick event to bring up a smiley face with the result when the submit button is clicked. I used both functions on the same line separated by a semicolon to execute both functions at the same time. In activity 5, I learned to use the Math.ceil() object to round my result up to the nearest whole number. This makes sense when rounding up to a whole number when estimating the required amount of yards of flooring. This lesson will be extremely useful to my future learning environment because I comprehend how to build practical websites which show results by using the onclick event, such as using the flooring website to provide the user with the amount of flooring required. 
 </p>
 
+<b>Session 5</b>
+<p>
+Lesson 5 helped me deepen my understanding of conditions by using the else if statements and expressions using logical and comparison operators. In an if statement, if the condition is true, the code within the curly brackets following the if statement will execute. If the statement is false, it will continue until the condition found within an else statement is true. In my activities using an if else statement, I learned how to take the value of an option in a select form to display the results of the selected option. This was very helpful to my future learning environment because the ability to display the results of the selected option in a form can be useful in a future job. 
+</p>
+

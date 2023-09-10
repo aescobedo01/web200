@@ -75,6 +75,7 @@ div.content:hover a {
 
 .userresponse,
 .buttondesign,
+.buttonnospace,
 .designtemplate p,
 .designtemplate h1,
 .designtemplate h2,
@@ -94,6 +95,12 @@ div.content:hover a {
   display: block;
 }
 
+.buttonnospace {
+  margin-top: 2em;
+  max-width: 150px;
+  display: block;
+}
+
 .space {
   margin-bottom: 4em;
   display: block;
@@ -105,3 +112,4 @@ img {
   display: block;
   margin: 0 auto;
 }
+/**/

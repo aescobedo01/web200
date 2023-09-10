@@ -9,7 +9,7 @@ function returnText() {
     const calculateMonths = age * monthsPerYear;
     const calculateDays = age * daysPerYear;
     const calculateHours = age * daysPerYear * hoursPerDay;
-    const calculateSeconds = age * hoursPerDay * secondsPerHour;
+    const calculateSeconds = age * daysPerYear * hoursPerDay * secondsPerHour;
 
     window.alert(["Your age in months is " + calculateMonths + " months, your age in days is " + calculateDays + " days, your age in hours is " + calculateHours + " hours, and your age in seconds is " + calculateSeconds + " seconds."]);
 }
