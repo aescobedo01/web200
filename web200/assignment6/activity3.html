@@ -1,0 +1,38 @@
+<!--
+ ask the user how many scores they would like to enter. 
+    Then use a loop to request each score using a prompt and 
+    add it to a total. Finally, calculate and display the average 
+    for the entered scores.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6: Activity 3</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&family=Marcellus&display=swap"
+        rel="stylesheet">
+    <script src="activity3.js"></script>
+</head>
+
+<body>
+    <main>
+        <div>
+            <h1 class="designtemplate">Calculate your average grade!</h1>
+            <p class="designtemplate">How many scores would you like to enter?</p>
+            <input  class="userresponse" name="amountofscores" id="scoresInput" type="text" placeholder="Enter amount of scores here...">
+            <button class="buttondesign" onclick="returnText()" value="calculate">Submit</button>
+            <div id="result"></div>
+        </div>
+    </main>
+
+</body>
+
+</html>
