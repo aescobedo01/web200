@@ -1,9 +1,8 @@
-<!--
- ask the user how many scores they would like to enter. 
-    Then use a loop to request each score using a prompt and 
-    add it to a total. Finally, calculate and display the average 
-    for the entered scores.
--->
+<!--Create a program that asks the user to enter grade scores.
+    Start by asking the user how many scores they would like to enter.
+    Then use a loop to request each score using a prompt and add it to a total. 
+    Finally, calculate and display the average for the entered scores. -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,11 +24,11 @@
 <body>
     <main>
         <div>
-            <h1 class="designtemplate">Calculate your average grade!</h1>
-            <p class="designtemplate">How many scores would you like to enter?</p>
-            <input  class="userresponse" name="amountofscores" id="scoresInput" type="text" placeholder="Enter amount of scores here...">
-            <button class="buttondesign" onclick="returnText()" value="calculate">Submit</button>
-            <div id="result"></div>
+            <h1 class="designtemplate">Average test score calculator</h1>
+            <button class="buttondesign" onclick="returnText()" value="calculate">Start here!</button>
+            <p id="result"></p>
+            <p id="studyharder"></p>
+            <p id="greatjob"></p>
         </div>
     </main>
 

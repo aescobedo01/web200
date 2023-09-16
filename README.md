@@ -27,3 +27,8 @@ Lesson 4 was very informative for learning how to use events. An event must be b
 Lesson 5 helped me deepen my understanding of conditions by using the else if statements and expressions using logical and comparison operators. In an if statement, if the condition is true, the code within the curly brackets following the if statement will execute. If the statement is false, it will continue until the condition found within an else statement is true. In my activities using an if else statement, I learned how to take the value of an option in a select form to display the results of the selected option. This was very helpful to my future learning environment because the ability to display the results of the selected option in a form can be useful in a future job. 
 </p>
 
+<b>Session 6</b>
+<p>
+Lesson 6 is about while loops and it has proven to be the most challenging lesson thus far. During this lesson, we learned that while loops test a condition, similar to an if statement. The difference is that in a while loop, if the condition is true, the code is executed, and it will loop around and test condition again. As long as it is a true statement, it will continue being executed. It stops once the statement becomes false. Additionally, I learned that using a break in a while statement will stop the while loop from running anymore. My projects involved using while loops to prompt the user for information and then returning a value by using while loops to calculate the sum of the inputs. I feel that this lesson has deepened my current understanding of JavaScript because these projects were a huge challenge for me. 
+
+</p>
