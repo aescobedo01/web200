@@ -22,6 +22,7 @@ function returnText() {
     
     document.getElementById("result").innerHTML = 'Your average test score is ' + average;
 
+//display message 
 
     if (average <= 75) {
         document.getElementById("studyharder").innerHTML = 'Study harder next time!';
