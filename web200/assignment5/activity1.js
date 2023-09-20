@@ -1,3 +1,7 @@
+window.onload = function() {
+    document.getElementById("myBtn").addEventListener("click", returnText);
+}
+
 function returnText() {
     let hours = parseFloat(document.getElementById("hoursInput").value);
     let wage = parseFloat(document.getElementById("wageInput").value);

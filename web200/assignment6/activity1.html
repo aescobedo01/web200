@@ -1,7 +1,7 @@
 <!--
  ask the user how many scores they would like to enter. 
-    Then use a loop to request each score using a prompt and 
-    add it to a total. Finally, calculate and display the average 
+    use a loop to request each score using a prompt and 
+    add it to a total. calculate and display the average 
     for the entered scores.
 -->
 <!DOCTYPE html>
@@ -30,7 +30,7 @@
             <input  class="userresponse" name="amountoftimes" id="amountOfTimes" type="text" placeholder="Enter amount of expressions...">
             <p class="designtemplate">Pick a number to be multiplied...</p>
             <input class="userresponse" name="numberinput" id="numberInput" type="text" placeholder="Enter a number here...">
-            <button class="buttonnospace" onclick="returnText()" value="calculate">Submit</button>
+            <button class="buttonnospace" id="myBtn" value="calculate">Submit</button>
             <p class="space" id="result"></p>
         </div>
     </main>

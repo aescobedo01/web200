@@ -1,3 +1,7 @@
+window.onload = function() {
+    document.getElementById("myBtn").addEventListener("click", returnText);
+}
+
 function returnText() {
     var age = parseFloat(document.getElementById("ageInput").value);
     var dropdown = document.getElementById("dropdownHere");

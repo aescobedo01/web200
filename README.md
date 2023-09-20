@@ -32,3 +32,8 @@ Lesson 5 helped me deepen my understanding of conditions by using the else if st
 Lesson 6 is about while loops and it has proven to be the most challenging lesson thus far. During this lesson, we learned that while loops test a condition, similar to an if statement. The difference is that in a while loop, if the condition is true, the code is executed, and it will loop around and test condition again. As long as it is a true statement, it will continue being executed. It stops once the statement becomes false. Additionally, I learned that using a break in a while statement will stop the while loop from running anymore. My projects involved using while loops to prompt the user for information and then returning a value by using while loops to calculate the sum of the inputs. I feel that this lesson has deepened my current understanding of JavaScript because these projects were a huge challenge for me. 
 
 </p>
+
+<b>Session 7</b>
+<p>
+Lesson 7 was a difficult but rewarding experience. FOR and IF are examples of control flow statements. Control flow statements loop (repeat) and execute code. If else is a conditional statement and can be used to execute a statement if the condition is true. Any values that equate to false will show up as false, undefined, null, 0, NaN, or an empty string. During lesson 7, I was able to work with for loops and nested loops. Nested loops were an extremely difficult challenge but I comprehend how they work better than before this lesson. This lesson was very helpful to my current learning environment because I now know how to use for loops and if else statements together. 
+</p>

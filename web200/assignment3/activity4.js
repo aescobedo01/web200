@@ -5,7 +5,6 @@ shape choices. That will come later. For now, just
 include multiple shape calculations in sequence
 */
 
-// this function returns the area of a rectangle only. 
 function rectangleArea() {
 
     let widthofrec = parseFloat(document.getElementById("widthRec").value);
