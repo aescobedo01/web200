@@ -2,6 +2,10 @@
     Rather than simply creating a 10 by 10 table, ask the user to enter the 
     starting and ending values. Include row and column labels. */
 
+    window.onload = function() {
+        document.getElementById("myBtn").addEventListener("click", returnText);
+    }
+
 function returnText(){
 
     let startval = parseInt(document.getElementById("startValue").value);

@@ -1,3 +1,7 @@
+window.onload = function() {
+    document.getElementById("myBtn").addEventListener("click", returnText);
+}
+
 function returnText() {
     let pi = 3;
     let num = 1;
