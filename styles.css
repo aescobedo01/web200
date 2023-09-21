@@ -112,6 +112,10 @@ img {
   height: auto;
   display: block;
   margin: 0 auto;
+  font-size: 0;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
  tbody, table, th, td {

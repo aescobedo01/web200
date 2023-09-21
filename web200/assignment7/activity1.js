@@ -11,30 +11,30 @@ function returnText(){
     let startval = parseInt(document.getElementById("startValue").value);
     let endval = parseInt(document.getElementById("endValue").value);
     let result = document.getElementById("result");
-    let tableTxt = "";
-    tableTxt += "<table border='1' callpadding='10'>";
+    let tableItem = "";
+    tableItem += "<table border='1' callpadding='10'>";
 
     startval--;
 
     for(i = startval; i <= endval; i++) {
-        tableTxt += "<tr>"
+        tableItem += "<tr>"
         for(let k = startval; k <= endval; k++){
             if(i == startval && k == startval){
-                tableTxt += '<td>' + "x" + '</td>';
+                tableItem += '<td>' + "x" + '</td>';
             }
             else if(i == startval && k != startval) {
-                tableTxt += '<th style="background-color: #005427">' + k + '</th>';
+                tableItem += '<th style="background-color: #005427">' + k + '</th>';
             }
             else if(k == startval && i != startval) {
-                tableTxt += '<th style="background-color: #228B22">' + i + '</th>';
+                tableItem += '<th style="background-color: #228B22">' + i + '</th>';
             }
             else {
-                tableTxt += '<td>' + (i*k) + '</td>';
+                tableItem += '<td>' + (i * k) + '</td>';
             }
         }
-        tableTxt += "</tr>";
+        tableItem += "</tr>";
     }
     console.log(result);
-    tableTxt += "</table>";
-    result.innerHTML = tableTxt;
+    tableItem += "</table>";
+    result.innerHTML = tableItem;
 }
