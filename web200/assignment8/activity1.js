@@ -1,3 +1,7 @@
+window.onload = function() {
+    document.getElementById("myBtn").addEventListener("click", returnText);
+}
+
 function returnText() {
     let amountofscores = 0;
     let score = 0; 
@@ -16,17 +20,17 @@ function returnText() {
         num++;
     }
 
+    let average = (total / amountofscores).toFixed(2);
 
-    let average = total / amountofscores;
-    
-    document.getElementById("result").innerHTML = 'Your average test score is ' + average;
-
-    let htmlString = "<ul>";
+    //display results in array
+    let htmlString = "";
     for (let i = 0; i < scores.length; i++) {
-        htmlString += "<li>Score " + (i+1) + ": " + scores[i] + "</li>";
+        htmlString += "Score " + (i+1) + ": " + scores[i] + "</br>";
     }
-    htmlString += "</ul>";
-    document.getElementById("result").innerHTML = htmlString;
+    htmlString += "";
+    //
+
+    document.getElementById("result").innerHTML = htmlString + 'Your average test score is ' + average;
 
 
 //display message 

@@ -37,3 +37,8 @@ Lesson 6 is about while loops and it has proven to be the most challenging lesso
 <p>
 Lesson 7 was a difficult but rewarding experience. FOR and IF are examples of control flow statements. Control flow statements loop (repeat) and execute code. If else is a conditional statement and can be used to execute a statement if the condition is true. Any values that equate to false will show up as false, undefined, null, 0, NaN, or an empty string. During lesson 7, I was able to work with for loops and nested loops. Nested loops were an extremely difficult challenge but I comprehend how they work better than before this lesson. Additionally, I learned how to use an event listener to call my function without adding JavaScript directly into my HTML. This lesson was very helpful to my current learning environment because I now know how to use for loops and if else statements together. 
 </p>
+
+<b>Session 8</b>
+<p>
+Lesson 8 was challenging but fun. When creating my array, I wanted to make sure all of my scores were displayed so I added a string to display once all of the inputs had been collected from the user.
+</p> 
