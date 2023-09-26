@@ -2,7 +2,7 @@ Ana Escobedo
 # WEB200
 Learning JavaScript!
 
-Welcome to my repository! My name is Ana Escobedo and I am taking WEB200 to help deepen my understanding of JavaScript. I have a learning disability so learning is better for me with an instructor, which is another reason why I am taking this class. I hope to use JavaScript to further my knowledge about web development in order to get an associates in science with a focus in web development. Ideally, I would love to be a back-end developer and impliment JavaScript techniques, but I am still considering what potential career options there are. I am excited to learn about how JavaScript makes web pages more interactive. 
+Welcome to my repository! My name is Ana Escobedo and I am taking WEB200 to help deepen my understanding of JavaScript. I am taking this class because I have a learning disability so learning is better for me with an instructor. I hope to use JavaScript to further my knowledge about web development in order to get an associates in science with a focus in web development. Ideally, I would love to be a back-end developer and impliment JavaScript techniques, but I am still considering what potential career options there are. I am excited to learn about how JavaScript makes web pages more interactive. 
 
 <b>Session 2</b>
 Session two was very informative for learning all about variables and expressions. I learned about how functions work and how to prompt the user to input information. Variables are containers that store values, such as let, which is followed by the variable name. A string shows up as text in the browser. While coding my JavaScript, I realized that my function for the age converter program did not function properly because I did not initialize my variables before typing in my commands. This information has very useful for me because I have learned how to collect and process the user input using operators and variables and successfully provided the user with an end result. I hope to use this information in the future to create websites designed to help users with calculating information. 
@@ -40,5 +40,5 @@ Lesson 7 was a difficult but rewarding experience. FOR and IF are examples of co
 
 <b>Session 8</b>
 <p>
-Lesson 8 was challenging but fun. When creating my array, I wanted to make sure all of my scores were displayed so I added a string to display once all of the inputs had been collected from the user.
+Lesson 8 was challenging but fun. Throughout this lesson, I learned that arrays ca different data types. Additionally, an array can hold a string which is an element in an array. By referring to the index number, you can call the string. When creating my array, I wanted to make sure all of my scores were displayed so I added a string to display them once all of the inputs had been collected from the user. This was very useful to my current learning environment because I now know how to properly store ifnormation given by the user and display it on the webpage. 
 </p> 
