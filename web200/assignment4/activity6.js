@@ -30,7 +30,6 @@ function paintFunction(){
     let width = parseFloat(document.getElementById("roomWidth").value);
     let height = parseFloat(document.getElementById("roomHeight").value);
     let coverage = parseFloat(document.getElementById("paintCoverage").value);
-   let price = parseFloat(document.getElementById("paintPrice").value);
 
 
     const walls1and2 = 2 * width * height;
