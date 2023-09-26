@@ -19,26 +19,7 @@ how much paint is required
 */
 
 window.onload = function() {
-    document.getElementById("myBtn").addEventListener("click", paintFunction);
     document.getElementById("myBtn").addEventListener("click", moneyFunction);
-}
-
-
-
-function paintFunction(){
-    let length = parseFloat(document.getElementById("roomLength").value);
-    let width = parseFloat(document.getElementById("roomWidth").value);
-    let height = parseFloat(document.getElementById("roomHeight").value);
-    let coverage = parseFloat(document.getElementById("paintCoverage").value);
-
-
-    const walls1and2 = 2 * width * height;
-    const walls3and4 = 2 * length * height;
-    const totalAreaOfWalls = walls1and2 + walls3and4;
-
-    totalPaintNeeded = Math.ceil(totalAreaOfWalls / coverage);
-
-    document.getElementById("paintresult").innerHTML = 'Estimated total gallon(s) of paint needed is ' + totalPaintNeeded + ' gallon(s).';
 }
 
 function moneyFunction(){
@@ -52,10 +33,11 @@ function moneyFunction(){
     const walls1and2 = 2 * width * height;
     const walls3and4 = 2 * length * height;
     const totalAreaOfWalls = walls1and2 + walls3and4;
-    const totalPaintNeeded = totalAreaOfWalls / coverage;
 
+    totalPaintNeeded = Math.ceil(totalAreaOfWalls / coverage);
     totalPriceOfPaint = Math.round(totalPaintNeeded * price);
 
+    document.getElementById("paintresult").innerHTML = 'Estimated total gallon(s) of paint needed is ' + totalPaintNeeded + ' gallon(s).';
     document.getElementById("priceresult").innerHTML = 'Estimated total cost of paint needed is $' + totalPriceOfPaint + '.';
 }
 
