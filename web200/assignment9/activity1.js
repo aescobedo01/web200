@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function returnText() {
-    var date = new Date();
+    let date = new Date();
 
     let year = date.getFullYear();
-    let month = date.getMonth() + 1; // JavaScript months are 0-11
+    let month = date.getMonth() + 1; //count from 0
     let day = date.getDate();
 
     let seconds = date.getSeconds();

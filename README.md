@@ -40,5 +40,10 @@ Lesson 7 was a difficult but rewarding experience. FOR and IF are examples of co
 
 <b>Session 8</b>
 <p>
-Lesson 8 was challenging but fun. Throughout this lesson, I learned that arrays ca different data types. Additionally, an array can hold a string which is an element in an array. By referring to the index number, you can call the string. When creating my array, I wanted to make sure all of my scores were displayed so I added a string to display them once all of the inputs had been collected from the user. This was very useful to my current learning environment because I now know how to properly store ifnormation given by the user and display it on the webpage. 
+Lesson 8 was challenging but fun. Throughout this lesson, I learned that arrays can be different data types. Additionally, an array can hold a string which is an element in an array. By referring to the index number, you can call the string. When creating my array, I wanted to make sure all of my scores were displayed so I added a string to display them once all of the inputs had been collected from the user. This was very useful to my current learning environment because I now know how to properly store ifnormation given by the user and display it on the webpage. 
 </p> 
+
+<b>Session 9</b>
+<p>
+Lesson 9 was all about challenging myself to create date and time objects. I learned how to use the setInterval object to keep the time updating in real time which was very helpful. Additionally, I learned how to use the DOMContentLoaded event listener to call the function when the page finishes parsing. I also learned how to use getUTCdate to ensure I am using the local date-time and this is helpful to be more accurate when displaying the date. This lesson was very useful to my current learning environment because it forced me to learn new JavaScript techniques to improve my skills for the future. 
+</p>
