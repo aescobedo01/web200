@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Create a web page that allows the user to enter book information for a bibliography.
+    Include properties for title, author, year, publisher, city, and state.
+    Respond to one or more user interface events to create an instance
+    of a Book object and then display the book properties in APA format:
+
+ex. 
+Veitch, R. (2006). Can't Get No. New York, NY: DC Comics.
+-->
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 10: Activity 1</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&family=Marcellus&display=swap"
+        rel="stylesheet">
+    <script src="activity1.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div>
+            <h1 class="designtemplate">gjgfjdgfsskdfh</h1>
+
+            <form id= 'form' >
+
+                <p class="designtemplate">Title:</p>
+                <input onkeydown="handleEnter(event)" class="userresponse" name="title" id="titleInput">
+
+                <p class="designtemplate">Author:</p>
+                <input onkeydown="handleEnter(event)" class="userresponse" name="author" id="authorInput">
+
+                <p class="designtemplate">Year:</p>
+                <input onkeydown="handleEnter(event)" class="userresponse" name="year" id="yearInput">
+
+                <p class="designtemplate">Publisher:</p>
+                <input onkeydown="handleEnter(event)" class="userresponse" name="publisher" id="publisherInput">
+
+                <p class="designtemplate">City:</p>
+                <input onkeydown="handleEnter(event)" class="userresponse" name="city" id="cityInput">
+
+                <p class="designtemplate">State:</p>
+                <input onkeydown="handleEnter(event)" class="userresponse" name="state" id="stateInput">
+                
+                <button class="buttondesign" id="myBtn" value="calculate">Submit</button>
+
+                <p class="space" id="result"></p>
+
+                </form>
+        </div>
+    </main>
+
+</body>
+
+</html>
