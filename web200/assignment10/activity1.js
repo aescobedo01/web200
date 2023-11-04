@@ -18,23 +18,8 @@ function addGroceryItem() {
 }*/
 
 window.onload = function() {
-    document.getElementById("myBtn").addEventListener("click", function(event){
-        event.preventDefault();
-        myFunction();
-    }); 
-    var inputs = document.querySelectorAll('#form input');
-    inputs.forEach(input => input.addEventListener('keydown', handleEnter));
-
+    document.getElementById("myBtn").addEventListener("click", myFunction);
 }
-
-function handleEnter(event) {
-    if (event.key==="Enter") {
-        const form = document.getElementById('form');
-        const index = Array.from(form.elements).indexOf(event.target);
-        form.elements[index + 1].focus();
-        event.preventDefault();
-     }
- }
 
 function myFunction(){
 
