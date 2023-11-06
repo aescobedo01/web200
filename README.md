@@ -45,5 +45,10 @@ Lesson 8 was challenging but fun. Throughout this lesson, I learned that arrays 
 
 <b>Session 9</b>
 <p>
-Lesson 9 was all about challenging myself to create date and time objects. I learned how to use the setInterval object to keep the time updating in real time which was very helpful. Additionally, I learned how to use the DOMContentLoaded event listener to call the function when the page finishes parsing. I also learned how to use getUTCdate to ensure I am using the local date-time and this is helpful to be more accurate when displaying the date. This lesson was very useful to my current learning environment because it forced me to learn new JavaScript techniques to improve my skills for the future. 
+Lesson 9 was all about challenging myself to create date and time objects. I learned how to use the setInterval object to keep the time updating in real time which was very helpful. Additionally, I learned how to use the DOMContentLoaded event listener to call the function when the page finishes parsing. I also learned how to use getUTCdate to ensure I am using the local date-time and this is helpful to be more accurate when displaying the date. This lesson was very useful to my current learning environment because it helped me to learn new JavaScript techniques to improve my skills for the future. 
+</p>
+
+<b>Session 10</b>
+<p>
+Lesson 10 was an informative lesson regarding objects in JavaScript. I used the keyword 'this' to set the values in my function to create my Book object. Then, I learned how to use the split method to split the author name and return a concatenated string using the split name to create different formats for citations. The different objects were used to create different MLA and APA book citations. It was helpful to think about using the new objects like reaching into different folders. This lesson was extremely difficult for me but the lessons learned are extremely valuable to me and I will use them in my future learning environment to help process user input. 
 </p>

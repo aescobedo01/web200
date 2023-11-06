@@ -1,0 +1,62 @@
+<!--
+    Create a web page that allows the user to enter book information for a bibliography.
+    Include properties for title, author, year, publisher, city, and state.
+    Respond to one or more user interface events to create an instance
+    of a Book object and then display the book properties in APA format:
+    
+ Extend the program above by adding an MLA method to your Book object that automatically formats the book for display. 
+ Display both APA and MLA formats for the book:[3]
+    APA: Last, F. M. (Year) Title. City, State: Publisher.
+    MLA: Last, First M. Title. Publisher, Year.
+    -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 10: Activity 3</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&family=Marcellus&display=swap"
+        rel="stylesheet">
+    <script src="activity3.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div>
+            <h1 class="designtemplate">Book Citations</h1>
+
+            <p class="designtemplate">Title:</p>
+            <input class="userresponse" name="title" id="titleInput">
+
+            <p class="designtemplate">Author:</p>
+            <input class="userresponse" name="author" id="authorInput">
+
+            <p class="designtemplate">Year:</p>
+            <input class="userresponse" name="year" id="yearInput">
+
+            <p class="designtemplate">Publisher:</p>
+            <input class="userresponse" name="publisher" id="publisherInput">
+
+            <p class="designtemplate">City:</p>
+            <input class="userresponse" name="city" id="cityInput">
+
+            <p class="designtemplate">State:</p>
+            <input class="userresponse" name="state" id="stateInput">
+            
+            <button class="buttondesign" id="myBtn" value="calculate">Submit</button>
+
+            <p id="resultAPA"></p>
+            <p class="space" id="resultMLA"></p>
+        </div>
+    </main>
+</body>
+
+</html>
