@@ -71,15 +71,17 @@ div.content:hover a {
   color: rgb(225, 237, 219);
 }
 
+ul
+{
+    list-style-type:none;
+    padding:0px;
+    margin:0px;
+}
+
 /**/
 
 .userresponse,
-.buttondesign,
-.buttonnospace,
-.designtemplate p,
-.designtemplate h1,
-.designtemplate h2,
-.designtemplate button {
+.designtemplate {
   border-radius: .5rem;
   text-align: center;
   padding: 10px;
@@ -90,16 +92,20 @@ div.content:hover a {
 }
 
 .buttondesign {
-  margin-top: 4em;
-  max-width: 150px;
   display: block;
-}
-
-.buttonnospace {
-  margin-top: 2em;
-  max-width: 150px;
-  display: block;
-  margin-bottom: 10px;
+  border: 1.5px solid white;
+  background-color: rgb(171, 182, 167);
+  height: 50px;
+  width: 25%;
+  margin: 3em auto;
+  cursor: pointer;
+  font-family: commuters-sans, sans-serif;
+  color: #f9f6ed;
+  font-size: 0.9em;
+  line-height: 0.9;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
 .space {
@@ -138,8 +144,13 @@ td {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
   text-align: center;
+}
+
+#dropdownHere {
+  display: block;
+  text-align: center;
+  margin: auto;
 }
 
 #result {
