@@ -3,13 +3,14 @@ Create JavaScript code to display the current window size, screen size,
  and location information. Use the resize event to update the display 
  whenever the window size changes.
  */
+
 window.onload = function () {
     document.getElementById("myBtn").addEventListener("click", myFunction);
 }
 
 function myFunction() { 
 
-    //current window n screen size
+    //current window/screen size
     let win = window,
         doc = document,
         docElem = doc.documentElement,

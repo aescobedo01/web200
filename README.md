@@ -55,6 +55,6 @@ Lesson 10 was an informative lesson regarding objects in JavaScript. I used the 
 
 <b>Session 11</b>
 <p>
-Lesson 11 was about object models which helped through the activities. The browser object model allows the user to access location and screen size. Different types of nodes include document, documenttype, element, text, comments, and documentfragments. I learned to use getElementsByTagName to display all element names on the browser window using a for loop. Additionally, getCurrentPosition method was used to get the user's location through if else statements. I displayed the users location or an error message
+Lesson 11 was about object models which helped through the activities. The browser object model allows the user to access location and screen size. Different types of nodes include document, documenttype, element, text, comments, and documentfragments. In my assignments, I learned to use getElementsByTagName to display all element names on the browser window using a for loop. Additionally, getCurrentPosition method was used to get the user's location through if else statements. I displayed the users location or an error message
 if the user did not allow for Geolocation to access their current location. The window size logger updates the current window size when the user resizes the window. This lesson was very helpful to my learning environment because I learned how to display user information in real time. 
 </p>
