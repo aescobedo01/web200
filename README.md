@@ -58,3 +58,8 @@ Lesson 10 was an informative lesson regarding objects in JavaScript. I used the 
 Lesson 11 was about object models which helped through the activities. The browser object model allows the user to access location and screen size. Different types of nodes include document, documenttype, element, text, comments, and documentfragments. In my assignments, I learned to use getElementsByTagName to display all element names on the browser window using a for loop. Additionally, getCurrentPosition method was used to get the user's location through if else statements. I displayed the users location or an error message
 if the user did not allow for Geolocation to access their current location. The window size logger updates the current window size when the user resizes the window. This lesson was very helpful to my learning environment because I learned how to display user information in real time. 
 </p>
+
+<b>Session 12</b>
+<p>
+Lesson 12 was learning how to dynamically change HTML using JavaScript. I used dynamic HTML to create a new button using the createElement method and createTextNode to add text to the button. I appended the text node to the button element. I added CSS using the setAttribute method but my page did not load so I learned that 2 arguments are required for it to work, a name and value. Then, I used the location.reload() method to reload the page when clicked. Finally, I used the setAttribute method to disappear the "start here" button when clicked. This lesson has been very useful to my current learning environment because I familiarized myself with new methods to successfully create an element and made it work dynamically in the web browser.
+</p>
