@@ -63,3 +63,9 @@ if the user did not allow for Geolocation to access their current location. The 
 <p>
 Lesson 12 was learning how to dynamically change HTML using JavaScript. I used dynamic HTML to create a new button using the createElement method and createTextNode to add text to the button. I appended the text node to the button element. I added CSS using the setAttribute method but my page did not load so I learned that 2 arguments are required for it to work, a name and value. Then, I used the location.reload() method to reload the page when clicked. Finally, I used the setAttribute method to disappear the "start here" button when clicked. This lesson has been very useful to my current learning environment because I familiarized myself with new methods to successfully create an element and made it work dynamically in the web browser.
 </p>
+
+<b>Session 13 </b>
+<p>
+Session 13 was about learning how to incorporate dynamic HTML and attributes into a form.
+I learned that the GET method attribute should NEVER be used when dealing with sensitive data such as personal information, so I used the POST method attribute when making my form. Additionally, I learned how to use the required attribute to make all input areas required, as well as hhow to add a minimum letter count for each form using the min attribute. This lesson has been very useful to my current JavaScript knowledge because I got the opportunity to study examples of good forms on websites and understand how to use attributes in a form. 
+</p>
