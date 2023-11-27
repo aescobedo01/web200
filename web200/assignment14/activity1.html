@@ -17,9 +17,8 @@
 </head>
 
 <!--
-    Create an HTML form that allows the user to enter their 
-    first name, last name, address, city, region, postal code, 
-    email address, phone number, and date of birth.
+Convert project 13 to send form data using AJAX and JSON rather 
+than through form submission. Use POST to add users and use GET to retrieve user data.
 -->
 
 <body>
@@ -27,7 +26,7 @@
         <div>
             <h1>New User</h1>
 
-            <form name="form" id="myForm" method="post">
+            <form name="form" id="form" method="post">
 
                 <label for="FirstName" class="designtemplate">First Name</label>
                 <input type="text" name="fname" id="firstName" minlength="1" placeholder="First Name" required="required"

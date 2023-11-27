@@ -5,9 +5,8 @@
     error messages to inform the user of any necessary corrections. 
     Help the user enter data matching appropriate patterns for 
     phone number and date of birth based on your locale.
--->
 
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -33,21 +32,96 @@
             <form name="form" id="myForm" method="post">
 
                 <label for="FirstName" class="designtemplate">First Name</label>
-                <input onkeyup="returnText()" type="text" name="fname" id="firstName" minlength="1" placeholder="First Name"
-                    required="required" class="userresponse">
-                <label for="LastName" class="designtemplate">Last Name</label>
-                <input onkeyup="returnText()" type="text" name="lname" minlength="1" id="lastName" placeholder="Last Name" required="required"
+                <input type="text" name="fname" id="firstName" minlength="1" placeholder="First Name" required="required"
                     class="userresponse">
+                
+                    <label for="LastName" class="designtemplate">Last Name</label>
+                <input type="text" name="lname" minlength="1" id="lastName" placeholder="Last Name" required="required"
+                    class="userresponse">
+
                 <label for="birthday" class="designtemplate">Birthday</label>
-                <input onkeyup="returnText()" type="date" name="birthday" id="birthDay" required="required" class="userresponse">
+                <input type="date" name="birthday" id="birthDay" required="required" class="userresponse">
+                
                 <label for="Address" class="designtemplate">Address</label>
-                <input onkeyup="returnText()" type="text" name="address" id="userAddress" placeholder="Address" required="required"
+                <input type="text" name="address" id="userAddress" placeholder="Address" required="required"
                     class="userresponse">
-                <label for="City" class="designtemplate">City</label>
-                <input onkeyup="returnText()" type="text" name="city" id="userCity" placeholder="City" required="required"
+                
+                    <label for="City" class="designtemplate">City</label>
+                <input type="text" name="city" id="userCity" placeholder="City" required="required"
                     class="userresponse">
-                <label for="State" class="designtemplate">State</label>
+                
+                    <label for="State" class="designtemplate">State</label>
                 <select name="state" id="stateList" class="userresponse">
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                </select>
+
+                <label for="ZipCode" class="designtemplate">Zip Code</label>
+                <input type="text" name="zipcode" id="zipCode" placeholder="Zip Code" required="required"
+                    class="userresponse">
+                <label for="Email" class="designtemplate">E-mail Address</label>
+                <input type="email" name="email" id="eMail" placeholder="E-mail Address" required="required"
+                    class="userresponse">
+                <label for="PhoneNumber" class="designtemplate">Phone Number</label>
+                <input type="text" name="phonenumber" id="phoneNumber" placeholder="Phone Number" required="required"
+                    class="userresponse">
+
+                <button id="myBtn" class="buttondesign" type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 13: Activity 3</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&family=Marcellus&display=swap"
+        rel="stylesheet">
+    <script src="activity3.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div>
+            <h1>New User</h1>
+
+            <form name="form" method="post">
+
+                <label for="FirstName" class="designtemplate">First Name</label>
+                <input type="text" name="fname" id="firstName" minlength="1" placeholder="First Name" required="required"
+                    class="userresponse"  onkeyup="returnText()">
+                
+                    <label for="LastName" class="designtemplate">Last Name</label>
+                <input type="text" name="lname" minlength="1" id="lastName" placeholder="Last Name" required="required"
+                    class="userresponse"  onkeyup="returnText()">
+
+                <label for="birthday" class="designtemplate">Birthday</label>
+                <input type="date" name="birthday" id="birthDay" required="required" class="userresponse"  onkeyup="returnText()">
+                
+                <label for="Address" class="designtemplate">Address</label>
+                <input type="text" name="address" id="userAddress" placeholder="Address" required="required"
+                    class="userresponse" onkeyup="returnText()">
+                
+                    <label for="City" class="designtemplate">City</label>
+                <input type="text" name="city" id="userCity" placeholder="City" required="required"
+                    class="userresponse" onkeyup="returnText()">
+                
+                    <label for="State" class="designtemplate">State</label>
+                <select name="state" id="stateList" onkeyup="returnText()" class="userresponse">
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
                     <option value="AZ">Arizona</option>
@@ -102,16 +176,16 @@
                 </select>
 
                 <label for="ZipCode" class="designtemplate">Zip Code</label>
-                <input onkeyup="returnText()" type="text" name="zipcode" id="zipCode" placeholder="Zip Code" required="required"
-                    class="userresponse">
+                <input type="text" name="zipcode" id="zipCode" placeholder="Zip Code" required="required"
+                    class="userresponse" onkeyup="returnText()">
                 <label for="Email" class="designtemplate">E-mail Address</label>
-                <input onkeyup="returnText()" type="email" name="email" id="eMail" placeholder="E-mail Address" required="required"
-                    class="userresponse">
+                <input type="email" name="email" id="eMail" placeholder="E-mail Address" required="required"
+                    class="userresponse" onkeyup="returnText()">
                 <label for="PhoneNumber" class="designtemplate">Phone Number</label>
-                <input onkeyup="returnText()" type="text" name="phonenumber" id="phoneNumber" placeholder="Phone Number" required="required"
-                    class="userresponse">
+                <input type="text" name="phonenumber" id="phoneNumber" placeholder="Phone Number" required="required"
+                    class="userresponse" onkeyup="returnText()">
 
-                <button id="myBtn" class="buttondesign" disabled="disabled" type="submit">Submit</button>
+                <button id="myBtn" class="buttondesign" type="submit">Submit</button>
             </form>
         </div>
     </main>

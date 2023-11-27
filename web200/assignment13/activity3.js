@@ -9,8 +9,7 @@
 
     
 
-TESTING TESTING 
-
+TESTING
 
 
 
@@ -23,7 +22,10 @@ window.onload = function () {
     }
 }
 
-function returnText(){
+*/
+
+  
+function returnText() {
     let f = document.forms["form"].elements;
     let cansubmit = true;
 
@@ -31,18 +33,7 @@ function returnText(){
         if (f[i].value.length == 0) cansubmit = false;
     }
 
-    document.getElementById("myBtn").disabled = !cansubmit;
-}
-*/
-
-function returnText(){
-var f = document.forms["form"].elements;
-        var cansubmit = true;
-
-        for (var i = 0; i < f.length; i++) {
-            if (f[i].value.length == 0) cansubmit = false;
-        }
-
-        document.getElementById("myBtn").disabled = !cansubmit;
-        
+    if (cansubmit) {
+        document.getElementById('myBtn').disabled = false;
+    }
 }

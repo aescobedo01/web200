@@ -1,6 +1,3 @@
-window.onload = function () {
-    document.getElementById("myBtn").addEventListener("click", returnText);
-}
 
 /* 
 
@@ -45,5 +42,13 @@ email address, phone number, and date of birth.
 
 })
 */
+
+window.onload = function () {
+    document.getElementById("myBtn").addEventListener("click", returnText);
+}
+
+function returnText() {
+    console.log(returnText());
+}
 
 
