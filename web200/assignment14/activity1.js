@@ -40,6 +40,7 @@ btn.addEventListener("click", function(event) {
     xhttp.open("POST", "activity1.html", true);
     xhttp.onload = function() {
         let ourData = JSON.parse(xhttp.responseText);
+        console.log(ourData);
     };
     xhttp.send();
 });
