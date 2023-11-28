@@ -37,7 +37,8 @@ btn.addEventListener("click", function(event) {
     event.preventDefault(); //prevents form submission
 
     const xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "activity1.html", true);
+    // xhttp.open("POST", "activity1.html", true);
+    xhttp.open("POST", "https://my-json-server.typicode.com/mikelangelo/pizzaJson/orders");
     xhttp.onload = function() {
         let ourData = JSON.parse(xhttp.responseText);
         console.log(ourData);
