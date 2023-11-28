@@ -113,9 +113,100 @@ than through form submission. Use POST to add users and use GET to retrieve user
                     class="userresponse">
 
                 <button id="myBtn" class="buttondesign" type="submit">Submit</button>
+
+                <p id="result"></p>
             </form>
         </div>
     </main>
 </body>
 
 </html>
+
+<!-- 
+
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 13: Activity 1</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&family=Marcellus&display=swap"
+        rel="stylesheet">
+    <script src="activity1.js" defer></script>
+</head>
+
+
+<body>
+    <main>
+        <div>
+            <h1>New User</h1>
+
+            <form name="form" id="form" method="post">
+
+                <label for="FirstName" class="designtemplate">First Name</label>
+                <input type="text" name="fname" id="firstName" minlength="1" placeholder="First Name" required="required"
+                    class="userresponse">
+                
+                    <label for="LastName" class="designtemplate">Last Name</label>
+                <input type="text" name="lname" minlength="1" id="lastName" placeholder="Last Name" required="required"
+                    class="userresponse">
+
+                <label for="birthday" class="designtemplate">Birthday</label>
+                <input type="date" name="birthday" id="birthDay" required="required" class="userresponse">
+                
+                <label for="Address" class="designtemplate">Address</label>
+                <input type="text" name="address" id="userAddress" placeholder="Address" required="required"
+                    class="userresponse">
+                
+                    <label for="City" class="designtemplate">City</label>
+                <input type="text" name="city" id="userCity" placeholder="City" required="required"
+                    class="userresponse">
+                
+                    <label for="State" class="designtemplate">State</label>
+                <select name="state" id="stateList" class="userresponse">
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
+                </select>
+
+                <label for="ZipCode" class="designtemplate">Zip Code</label>
+                <input type="text" name="zipcode" id="zipCode" placeholder="Zip Code" required="required"
+                    class="userresponse">
+                <label for="Email" class="designtemplate">E-mail Address</label>
+                <input type="email" name="email" id="eMail" placeholder="E-mail Address" required="required"
+                    class="userresponse">
+                <label for="PhoneNumber" class="designtemplate">Phone Number</label>
+                <input type="text" name="phonenumber" id="phoneNumber" placeholder="Phone Number" required="required"
+                    class="userresponse">
+
+                <button id="myBtn" class="buttondesign" type="submit">Submit</button>
+
+                <p id="result"></p>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
+
+<script>
+let btn = document.getElementById("myBtn");
+
+btn.addEventListener("click", function() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "activity1.html", true);
+    xhttp.onload = function() {
+        let ourData = JSON.parse(xhttp.responseText);
+    };
+    xhttp.send();
+});
+</script>
+-->

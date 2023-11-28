@@ -1,4 +1,4 @@
-function myFunction() {
+/* function myFunction() {
     var data = {
         fname: document.getElementById('firstName').value,
         lname: document.getElementById('lastName').value,
@@ -27,3 +27,31 @@ function myFunction() {
         }
     });
 }
+*/
+
+//19:40 tutorial 
+let btn = document.getElementById("myBtn");
+
+btn.addEventListener("click", function(event) {
+
+    event.preventDefault(); //prevents form submission
+
+    const xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "activity1.html", true);
+    xhttp.onload = function() {
+        let ourData = JSON.parse(xhttp.responseText);
+    };
+    xhttp.send();
+});
+
+
+/*
+function submitForm(e) {
+    e.preventDefault();
+
+    let formData = new FormData(form);
+    
+    formData.forEach(function (value, key) 
+    )};
+
+    */
