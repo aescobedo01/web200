@@ -1,0 +1,6 @@
+let json;
+try {
+  json = JSON.parse(input);
+} catch (e) {
+  console.error("Invalid JSON:", e);
+}
