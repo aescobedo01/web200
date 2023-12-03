@@ -132,24 +132,18 @@ to implement each type of processing, and include error handling for
 
                 <label for="PhoneNumber" class="designtemplate">Phone Number</label>
                 <input type="text" name="phonenumber" id="phoneNumber" placeholder="Phone Number" required="required"
-                    class="userresponse">
+                    class="userresponse space ">
+
+                <hr class="space">
+
+                <button type="button" class="buttondesign" onclick="addPizza()">+ Add pizza</button>
+
+                <div id="pizzaForm"></div>
 
                 <!--add pizza button
                     pick size
                     checkbox toppings
                 description -->
-
-                <hr>
-
-                <button id="addMore" class="buttondesign">+ Add pizza</button>
-
-                <p>Please select a size:</p>
-                <input type="radio" id="smallSize" name="small" value="12">
-                <label for="small">Small 12"</label><br>
-                <input type="radio" id="mediumSize" name="medium" value="14">
-                <label for="medium">Medium 14"</label><br>
-                <input type="radio" id="largeSize" name="large" value="16">
-                <label for="large">Large 16"</label><br><br>
 
                 <!--repeat-->
 
@@ -157,8 +151,6 @@ to implement each type of processing, and include error handling for
 
                 <!--subtotal including 10% tax
                     dynamically change as more pizzaz are added-->
-
-
 
                 <button id="myBtn" class="buttondesign" type="submit">Submit</button>
 
