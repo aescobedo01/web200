@@ -16,8 +16,6 @@ btn.addEventListener("click", function(event) {
         email: document.getElementById("eMail").value,
     };
 
-    console.log("Form data:", formData);
-
     const xhttp = new XMLHttpRequest();
     xhttp.open("POST", "https://my-json-server.typicode.com/typicode/demo", true);
     xhttp.setRequestHeader("Content-Type", "application/json");

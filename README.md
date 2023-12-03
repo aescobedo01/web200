@@ -67,5 +67,10 @@ Lesson 12 was learning how to dynamically change HTML using JavaScript. I used d
 <b>Session 13 </b>
 <p>
 Session 13 was about learning how to incorporate dynamic HTML and attributes into a form.
-I learned that the GET method attribute should NEVER be used when dealing with sensitive data such as personal information, so I used the POST method attribute when making my form. Additionally, I learned how to use the required attribute to make all input areas required, as well as hhow to add a minimum letter count for each form using the min attribute. This lesson has been very useful to my current JavaScript knowledge because I got the opportunity to study examples of good forms on websites and understand how to use attributes in a form. 
+I learned that the GET method attribute should NEVER be used when dealing with sensitive data such as personal information, so I used the POST method attribute when making my form. Additionally, I learned how to use the required attribute to make all input areas required, as well as how to add a minimum letter count for each form using the min attribute. This lesson has been very useful to my current JavaScript knowledge because I got the opportunity to study examples of good forms on websites and understand how to use attributes in a form. 
+</p>
+
+<b>Session 14</b>
+<p>
+Lesson 14 was about JSON and AJAX and it was truthfully an extremely difficult lesson for me to comprehend because it is such an abstract concept. JSON is used to send data from a server to a webpage. It is written using JavaScript. AJAX allows web apps to send data back and forth without disrupting the existing page. My first assignment resulted in the results of my form submission showing up in the console. I tried making my own json server but for some reason my JSON server page gave an error when I visited it. In my second assignment, I tested out my code using jsonplaceholder.typicode.com, however, it was unsuccessful due to my own server not working. Overall, I have learned that JSON and AJAX are very difficult to understand but I hope to get better at it in the future. 
 </p>
