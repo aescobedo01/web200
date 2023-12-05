@@ -53,117 +53,116 @@ to implement each type of processing, and include error handling for
 
             <div class="column">
 
-            <form name="form" id="form" method="post">
+                <form name="form" id="form" method="post">
 
-                <label for="FirstName" class="designtemplate">First Name</label>
-                <input type="text" name="fname" id="firstName" minlength="1" placeholder="First Name"
-                    required="required" class="userresponse">
+                    <label for="FirstName" class="designtemplate">First Name</label>
+                    <input type="text" name="fname" id="firstName" minlength="1" placeholder="First Name"
+                        required="required" class="userresponse">
 
-                <label for="LastName" class="designtemplate">Last Name</label>
-                <input type="text" name="lname" minlength="1" id="lastName" placeholder="Last Name" required="required"
-                    class="userresponse">
-
-
-                <label for="Address" class="designtemplate">Address</label>
-                <input type="text" name="address" id="userAddress" placeholder="Address" required="required"
-                    class="userresponse">
-
-                <label for="ZipCode" class="designtemplate">Zip Code</label>
-                <input type="text" name="zipcode" id="zipCode" placeholder="Zip Code" required="required"
-                    class="userresponse">
+                    <label for="LastName" class="designtemplate">Last Name</label>
+                    <input type="text" name="lname" minlength="1" id="lastName" placeholder="Last Name"
+                        required="required" class="userresponse">
 
 
-                <label for="City" class="designtemplate">City</label>
-                <input type="text" name="city" id="userCity" placeholder="City" required="required"
-                    class="userresponse">
+                    <label for="Address" class="designtemplate">Address</label>
+                    <input type="text" name="address" id="userAddress" placeholder="Address" required="required"
+                        class="userresponse">
 
-                <label for="State" class="designtemplate">State</label>
-                <select name="state" id="stateList" class="userresponse">
-                    <option value="AL">Alabama</option>
-                    <option value="AK">Alaska</option>
-                    <option value="AZ">Arizona</option>
-                    <option value="AR">Arkansas</option>
-                    <option value="CA">California</option>
-                    <option value="CO">Colorado</option>
-                    <option value="CT">Connecticut</option>
-                    <option value="DE">Delaware</option>
-                    <option value="DC">District Of Columbia</option>
-                    <option value="FL">Florida</option>
-                    <option value="GA">Georgia</option>
-                    <option value="HI">Hawaii</option>
-                    <option value="ID">Idaho</option>
-                    <option value="IL">Illinois</option>
-                    <option value="IN">Indiana</option>
-                    <option value="IA">Iowa</option>
-                    <option value="KS">Kansas</option>
-                    <option value="KY">Kentucky</option>
-                    <option value="LA">Louisiana</option>
-                    <option value="ME">Maine</option>
-                    <option value="MD">Maryland</option>
-                    <option value="MA">Massachusetts</option>
-                    <option value="MI">Michigan</option>
-                    <option value="MN">Minnesota</option>
-                    <option value="MS">Mississippi</option>
-                    <option value="MO">Missouri</option>
-                    <option value="MT">Montana</option>
-                    <option value="NE">Nebraska</option>
-                    <option value="NV">Nevada</option>
-                    <option value="NH">New Hampshire</option>
-                    <option value="NJ">New Jersey</option>
-                    <option value="NM">New Mexico</option>
-                    <option value="NY">New York</option>
-                    <option value="NC">North Carolina</option>
-                    <option value="ND">North Dakota</option>
-                    <option value="OH">Ohio</option>
-                    <option value="OK">Oklahoma</option>
-                    <option value="OR">Oregon</option>
-                    <option value="PA">Pennsylvania</option>
-                    <option value="RI">Rhode Island</option>
-                    <option value="SC">South Carolina</option>
-                    <option value="SD">South Dakota</option>
-                    <option value="TN">Tennessee</option>
-                    <option value="TX">Texas</option>
-                    <option value="UT">Utah</option>
-                    <option value="VT">Vermont</option>
-                    <option value="VA">Virginia</option>
-                    <option value="WA">Washington</option>
-                    <option value="WV">West Virginia</option>
-                    <option value="WI">Wisconsin</option>
-                    <option value="WY">Wyoming</option>
-                </select>
+                    <label for="ZipCode" class="designtemplate">Zip Code</label>
+                    <input type="text" name="zipcode" id="zipCode" placeholder="Zip Code" required="required"
+                        class="userresponse">
 
-                <label for="PhoneNumber" class="designtemplate">Phone Number</label>
-                <input type="text" name="phonenumber" id="phoneNumber" placeholder="Phone Number" required="required"
-                    class="userresponse space ">
 
-                <hr class="space">
+                    <label for="City" class="designtemplate">City</label>
+                    <input type="text" name="city" id="userCity" placeholder="City" required="required"
+                        class="userresponse">
 
-                <button type="button" class="buttondesign" onclick="addPizza()">+ Add pizza</button>
+                    <label for="State" class="designtemplate">State</label>
+                    <select name="state" id="stateList" class="userresponse">
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="DC">District Of Columbia</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
 
-                <p id="pizzaForm"></p>
+                    <label for="PhoneNumber" class="designtemplate">Phone Number</label>
+                    <input type="text" name="phonenumber" id="phoneNumber" placeholder="Phone Number"
+                        required="required" class="userresponse space ">
 
-                <!--add pizza button
+                    <hr class="space">
+
+                    <button type="button" class="buttondesign" onclick="addPizza()">+ Add pizza</button>
+
+                    <!--add pizza button
                     pick size
                     checkbox toppings
                 description -->
+                    <p id="pizzaForm"></p>
 
-                <!--repeat-->
+                    <!--special instructions-->
+                    <label for="instructions" class="designtemplate">Special intructions for delivery driver</label>
+                    <textarea name="instructions" class="designtemplate"></textarea>
 
-                <!--special instructions-->
+                    <button id="myBtn" class="buttondesign" type="submit">Submit</button>
 
-                <label for="instructions" class="designtemplate">Special intructions for delivery driver</label>
-                <textarea name="instructions" class="designtemplate"></textarea>
-
-                <button id="myBtn" class="buttondesign" type="submit">Submit</button>
-
-            </form>
+                </form>
 
             </div>
 
             <!--subtotal including 10% tax
-                    dynamically change as more pizzaz are added-->
+            dynamically change as more pizzaz are added-->
             <div class="column">
-                <p>priceyyyy</p>
+                <span>prices</span>
+                <p>price per pizza</p>
+                <p>tax</p>
+                <p>total</p>
             </div>
         </div>
     </main>
