@@ -11,10 +11,9 @@ Allow for multiple pizzas per order.
 Include support for at least three pizza sizes, with different prices for toppings
 based on pizza size.
 
-Dynamically display order information and price total as pizzas and toppings are added.
-
 Include a comments section for special notes and/or delivery instructions.
 
+Dynamically display order information and price total as pizzas and toppings are added.
 Include 10% sales tax.
 
 Your solution will include an Order object, which contains a Customer object, 
@@ -44,26 +43,13 @@ to implement each type of processing, and include error handling for
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&family=Marcellus&display=swap"
         rel="stylesheet">
     <script src="finalproject.js" defer></script>
-    <style>
-      .row{
-        display: flex;
-        justify-content: flex-start;
-      }
-     .firstCol{
-        border-right: 2px solid black;
-     }
-    </style>
 </head>
 
 <body>
     <main>
-     
-     <h1>Tasty Pizza Order Form</h1>
-        <div class="row">
-            
-
-            <div class="column firstCol">
-
+        <h1 class="pizza">Tasty Pizza Delivery</h1>
+        <div class="pizza">
+            <div class="pizza">
                 <form name="form" id="form" method="post">
 
                     <label for="FirstName" class="designtemplate">First Name</label>
@@ -151,10 +137,10 @@ to implement each type of processing, and include error handling for
 
                     <button type="button" class="buttondesign" onclick="addPizza()">+ Add pizza</button>
 
-                    <!--add pizza button
-                    pick size
-                    checkbox toppings
-                description -->
+                <!--add pizza button
+                pick size
+                checkbox toppings
+                 -->
                     <p id="pizzaForm"></p>
 
                     <!--special instructions-->
@@ -163,13 +149,14 @@ to implement each type of processing, and include error handling for
 
                     <button id="myBtn" class="buttondesign" type="submit">Submit</button>
 
-            </form>
+                </form>
 
             </div>
 
             <!--subtotal including 10% tax
+                add pizza description
             dynamically change as more pizzaz are added-->
-            <div class="column">
+            <div class="pizza2">
                 <span>prices</span>
                 <p>price per pizza</p>
                 <p>tax</p>
