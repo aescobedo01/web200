@@ -161,9 +161,10 @@ td {
   margin: 60px 0 20px 0;
 }
 
-div.pizza {
+/*div.pizza {
   margin: 0px;
-
+  border: 3px green solid;
+  inline-size: 50em;
 }
 
 .pizza2 {
@@ -173,4 +174,38 @@ div.pizza {
   right: 0;
   bottom: 0;
   border: 3px green solid;
+}*/
+
+.pizza2 {
+  width: 130px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: #eee;
+  overflow-x: hidden;
+  padding: 8px 0;
+}
+
+div.pizza2 {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2196F3;
+  display: block;
+}
+
+.pizza2 div:hover {
+  color: #064579;
+}
+
+div.pizza {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .pizza2 {padding-top: 15px;}
+  .pizza2 div {font-size: 18px;}
 }
