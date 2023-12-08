@@ -70,8 +70,8 @@ function updatePrice(pizzaNumber) {
     if (spinach) pizzaPrice += toppings[size];
     if (mushroom) pizzaPrice += toppings[size];
 
-    let totalCost = pizzaPrice x howevermanypizzasordered;
-    let tax = totalCost * 0.1; // Calculate 10% sales tax
+    let totalCost = pizzaPrice x howevermanypizzas;
+    let tax = totalCost * 0.1; //10% sales tax
     let grandTotal = totalCost + tax;
 // 
     document.getElementById('pizzaTotals').innerHTML = 'Pizza price: $' + totalCost.toFixed(2);
