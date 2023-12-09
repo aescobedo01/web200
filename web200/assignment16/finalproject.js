@@ -1,3 +1,4 @@
+// defining variables for my pizza
 let pizzaCount = 0;
 let totalCost = 0;
 
@@ -12,7 +13,7 @@ let toppingprice = {
     medium: 1.50,
     large: 2.50
 };
-
+//created form inside javascript to appear when the addpizza button is clicked
 function addPizza() {
     pizzaCount++;
     let pizzaForm = document.getElementById("pizzaForm");
@@ -51,6 +52,7 @@ function addPizza() {
 
     pizzaForm.appendChild(newForm);
 
+//error message pops up when user tries selecting topping without selecting size first
 let errorsDiv = document.getElementById("errors" + pizzaCount);
 
 newForm.querySelectorAll('input[name^="topping"]').forEach(function(toppingCheckbox) {
@@ -64,14 +66,15 @@ newForm.querySelectorAll('input[name^="topping"]').forEach(function(toppingCheck
     });
 });
 
+//call updateprice function
     updatePrice();
 }
 
 
-/////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
 
 
-
+// div showing the price breakdown and the pizza details (pizzadeets)
 function updatePrice() {
     totalCost = 0; //cost reset
     let pizzaDeets = document.getElementById("pizzaDeets");
@@ -87,6 +90,8 @@ function updatePrice() {
         //add the details of the pizzza to pizzaDeets
         pizzaDeets.innerHTML += `<p>Pizza ${i}: ${size}, ${toppings.length} toppings, $${pizzaPrice.toFixed(2)}</p>`;
     }
+
+    //price
     document.getElementById("pizzaTotals").innerText = `Base Price: $${totalCost.toFixed(2)}`;
     let tax = totalCost * 0.10;
     document.getElementById("taxesCost").innerText = `Sales Tax: $${tax.toFixed(2)}`;
@@ -97,7 +102,7 @@ function updatePrice() {
 
 //////////////////////////////////////////////////////////////////////////////////////
 
-
+//prevent form submission when submit is clicked and use ajax and json to send results 
 
 document.getElementById("pizzaGalore").addEventListener("click", submitAddPizzaForm);
 document.getElementById("myBtn").addEventListener("click", confirmOrder);
@@ -105,8 +110,10 @@ document.getElementById("myBtn").addEventListener("click", confirmOrder);
 let customerData = {};
 let pizzaOrders = [];
 
+
+//prevent form submission to be able to see the results in the console
 function submitAddPizzaForm(e) {
-    e.preventDefault(); // prevents form from being submitted causing a page refresh
+    e.preventDefault(); // prevents submission
     let formData = new FormData(form);
     let checkedToppings = [];
     let size;
@@ -120,21 +127,16 @@ function submitAddPizzaForm(e) {
             }
         }
     });
-
-    //
 }
 
-
+// order confirmation body of customer info and pizza info
 function confirmOrder() {
-    // order confirmation body of customer info and pizza info
     const body = {
         customer: customerData,
         pizzas: pizzaOrders,
     };
     console.log("body: ");
     console.log(body);
-
-
 
     const xhr = new XMLHttpRequest();
     xhr.open("POST", "https://my-json-server.typicode.com/mikelangelo/pizzaJson/orders");
@@ -146,30 +148,3 @@ function confirmOrder() {
 
     };
 }
-
-//////// FIX ERROR MESSAGE PLEAAAASEEE
-
-/*if (!size) {
-        errorsDiv.innerHTML = "You must select a size.";
-        return;
-    }
-
-
-    // if there's customer data from the form...
-    // console.log(checkedToppings.length);
-    if (customerData) {
-        errorsDiv.innerHTML = "";
-        if (checkedToppings.length > 0) {
-            const total = calculatePrice(checkedToppings, size);
-            console.log("toppings: " + checkedToppings);
-
-            addPizza(size, checkedToppings, total.total);
-            displayOrders();
-            init();
-        } else {
-        /*errorsDiv.innerHTML = "Please select at least one topping.";
-    }
-} else {
-   errorsDiv.innerHTML = errors;
-}
-} */
