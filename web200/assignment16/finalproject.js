@@ -18,38 +18,59 @@ function addPizza() {
     let pizzaForm = document.getElementById("pizzaForm");
     let newForm = document.createElement("form");
     newForm.id = "pizza" + pizzaCount;
-    newForm.innerHTML = 
-    '<h3>Build-your-own pizza ' + pizzaCount + '</h3>' +
-    '<p>Please select a size</p>' +
-    '<input type="radio" id="smallSize' + pizzaCount + '" name="size' + pizzaCount + '" value="small" onClick="updatePrice(' + pizzaCount + ')">' +
-    '<label for="small">Small 12"</label><br>' +
-    '<input type="radio" id="mediumSize' + pizzaCount + '" name="size' + pizzaCount + '" value="medium" onClick="updatePrice(' + pizzaCount + ')">' +
-    '<label for="medium">Medium 14"</label><br>' +
-    '<input type="radio" id="largeSize' + pizzaCount + '" name="size' + pizzaCount + '" value="large" onClick="updatePrice(' + pizzaCount + ')">' +
-    '<label for="large">Large 16"</label><br>' +
+    newForm.innerHTML =
+        '<h3>Build-your-own pizza ' + pizzaCount + '</h3>' +
+        '<p>Please select a size</p>' +
+        '<input type="radio" id="smallSize' + pizzaCount + '" name="size' + pizzaCount + '" value="small" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<label for="small">Small 12"</label><br>' +
+        '<input type="radio" id="mediumSize' + pizzaCount + '" name="size' + pizzaCount + '" value="medium" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<label for="medium">Medium 14"</label><br>' +
+        '<input type="radio" id="largeSize' + pizzaCount + '" name="size' + pizzaCount + '" value="large" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<label for="large">Large 16"</label><br>' +
 
-    '<span class="designtemplate">Toppings</span>' +
-    '<div class="mypizza"><input type="checkbox" id="0' + pizzaCount + '" name="topping' + pizzaCount + '" value="cheese" onClick="updatePrice(' + pizzaCount + ')">' +
-    '<label for="0">Cheese</label>' +
-    '<input type="checkbox" id="1' + pizzaCount + '" name="topping' + pizzaCount + '" value="ham" onClick="updatePrice(' + pizzaCount + ')">' +
-    '<label for="1">Ham</label></div>' +
-    '<div class="mypizza"><input type="checkbox" id="2' + pizzaCount + '" name="topping' + pizzaCount + '" value="jalapeno" onClick="updatePrice(' + pizzaCount + ')">' +
-    '<label for="2">Jalapeno</label>' +
-    '<input type="checkbox" id="3' + pizzaCount + '" name="topping' + pizzaCount + '" value="onion" onClick="updatePrice(' + pizzaCount + ')">' +
-    '<label for="3">Onion</label></div>' +
-    '<div><input type="checkbox" id="4' + pizzaCount + '" name="topping' + pizzaCount + '" value="pineapple" onClick="updatePrice(' + pizzaCount + ')">' +
-    '<label for="4">Pineapple</label>' +
-    '<input type="checkbox" id="5' + pizzaCount + '" name="topping' + pizzaCount + '" value="pepperoni" onClick="updatePrice(' + pizzaCount + ')">' +
-    '<label for="5">Pepperoni</label></div>' +
-    '<div><input type="checkbox" id="6' + pizzaCount + '" name="topping' + pizzaCount + '" value="spinach" onClick="updatePrice(' + pizzaCount + ')">' +
-    '<label for="6">Spinach</label>' +
-    '<input type="checkbox" id="7' + pizzaCount + '" name="topping' + pizzaCount + '" value="mushroom" onClick="updatePrice(' + pizzaCount + ')">' +
-    '<label for="7">Mushroom</label></div>' +
-    '<button type="button" class="buttondesign" onclick="addPizza()">Add Another Pizza</button>';
-  
+        '<div class="footer" id="errors' + pizzaCount + '"></div>' +
+
+        '<span class="designtemplate">Toppings</span>' +
+        '<div class="mypizza"><input type="checkbox" id="0' + pizzaCount + '" name="topping' + pizzaCount + '" value="cheese" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<label for="0">Cheese</label>' +
+        '<input type="checkbox" id="1' + pizzaCount + '" name="topping' + pizzaCount + '" value="ham" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<label for="1">Ham</label></div>' +
+        '<div class="mypizza"><input type="checkbox" id="2' + pizzaCount + '" name="topping' + pizzaCount + '" value="jalapeno" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<label for="2">Jalapeno</label>' +
+        '<input type="checkbox" id="3' + pizzaCount + '" name="topping' + pizzaCount + '" value="onion" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<label for="3">Onion</label></div>' +
+        '<div><input type="checkbox" id="4' + pizzaCount + '" name="topping' + pizzaCount + '" value="pineapple" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<label for="4">Pineapple</label>' +
+        '<input type="checkbox" id="5' + pizzaCount + '" name="topping' + pizzaCount + '" value="pepperoni" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<label for="5">Pepperoni</label></div>' +
+        '<div><input type="checkbox" id="6' + pizzaCount + '" name="topping' + pizzaCount + '" value="spinach" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<label for="6">Spinach</label>' +
+        '<input type="checkbox" id="7' + pizzaCount + '" name="topping' + pizzaCount + '" value="mushroom" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<label for="7">Mushroom</label></div>' +
+        '<button type="button" class="buttondesign" onclick="addPizza()">Add Another Pizza</button>';
+
     pizzaForm.appendChild(newForm);
+
+let errorsDiv = document.getElementById("errors" + pizzaCount);
+
+newForm.querySelectorAll('input[name^="topping"]').forEach(function(toppingCheckbox) {
+    toppingCheckbox.addEventListener('change', function() {
+        let sizeRadios = newForm.querySelectorAll('input[name^="size"]');
+        let sizeSelected = Array.from(sizeRadios).some(radio => radio.checked);
+        if (!sizeSelected) {
+            errorsDiv.innerHTML = "Please select a size before choosing toppings.";
+            this.checked = false; // Uncheck the topping
+        }
+    });
+});
+
     updatePrice();
 }
+
+
+/////////////////////////////////////////
+
+
 
 function updatePrice() {
     totalCost = 0; //cost reset
@@ -57,14 +78,14 @@ function updatePrice() {
     pizzaDeets.innerHTML = ""; //remove previous pizza deets
     for (let i = 1; i <= pizzaCount; i++) {
 
-    let size = document.querySelector(`input[name="size${i}"]:checked`).value;
-    let toppings = document.querySelectorAll(`input[name="topping${i}"]:checked`);
-    let pizzaPrice = sizeprice[size] + toppings.length * toppingprice[size];
-    totalCost += pizzaPrice;
-    console.log(`Pizza ${i}: Size - ${size}, Toppings - ${toppings.length}, Price - ${pizzaPrice}`);
+        let size = document.querySelector(`input[name="size${i}"]:checked`).value;
+        let toppings = document.querySelectorAll(`input[name="topping${i}"]:checked`);
+        let pizzaPrice = sizeprice[size] + toppings.length * toppingprice[size];
+        totalCost += pizzaPrice;
+        console.log(`Pizza ${i}: Size - ${size}, Toppings - ${toppings.length}, Price - ${pizzaPrice}`);
 
-    //add the details of the pizzza to pizzaDeets
-    pizzaDeets.innerHTML += `<p>Pizza ${i}: ${size}, ${toppings.length} toppings, $${pizzaPrice.toFixed(2)}</p>`;
+        //add the details of the pizzza to pizzaDeets
+        pizzaDeets.innerHTML += `<p>Pizza ${i}: ${size}, ${toppings.length} toppings, $${pizzaPrice.toFixed(2)}</p>`;
     }
     document.getElementById("pizzaTotals").innerText = `Base Price: $${totalCost.toFixed(2)}`;
     let tax = totalCost * 0.10;
@@ -73,14 +94,16 @@ function updatePrice() {
     document.getElementById("totalCostPizzas").innerText = `Grand Total: $${grandTotal.toFixed(2)}`;
 }
 
+
 //////////////////////////////////////////////////////////////////////////////////////
+
+
 
 document.getElementById("pizzaGalore").addEventListener("click", submitAddPizzaForm);
 document.getElementById("myBtn").addEventListener("click", confirmOrder);
-let customerData = {}; 
+
+let customerData = {};
 let pizzaOrders = [];
-    const errorsDiv = document.getElementById("errors");
-   // const ordObjDiv = document.getElementById("ord-object");
 
 function submitAddPizzaForm(e) {
     e.preventDefault(); // prevents form from being submitted causing a page refresh
@@ -94,9 +117,43 @@ function submitAddPizzaForm(e) {
         } else {
             if (key === "size") {
                 size = value;
-            } 
+            }
         }
     });
+
+    //
+}
+
+
+function confirmOrder() {
+    // order confirmation body of customer info and pizza info
+    const body = {
+        customer: customerData,
+        pizzas: pizzaOrders,
+    };
+    console.log("body: ");
+    console.log(body);
+
+
+
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://my-json-server.typicode.com/mikelangelo/pizzaJson/orders");
+    xhr.setRequestHeader("Content-type", "application/json");
+    xhr.send(JSON.stringify(body));
+    xhr.onload = function () {
+
+        console.log(JSON.parse(xhr.responseText));
+
+    };
+}
+
+//////// FIX ERROR MESSAGE PLEAAAASEEE
+
+/*if (!size) {
+        errorsDiv.innerHTML = "You must select a size.";
+        return;
+    }
+
 
     // if there's customer data from the form...
     // console.log(checkedToppings.length);
@@ -105,48 +162,14 @@ function submitAddPizzaForm(e) {
         if (checkedToppings.length > 0) {
             const total = calculatePrice(checkedToppings, size);
             console.log("toppings: " + checkedToppings);
-            
+
             addPizza(size, checkedToppings, total.total);
             displayOrders();
             init();
         } else {
-            errorsDiv.innerHTML = "Please select at least one topping.";
-        }
-    } else {
-        errorsDiv.innerHTML = errors;
+        /*errorsDiv.innerHTML = "Please select at least one topping.";
     }
+} else {
+   errorsDiv.innerHTML = errors;
 }
-
-
-function confirmOrder() {
-    // order confirmation body of customer info and pizza info
-    const body = {
-      customer: customerData,
-      pizzas: pizzaOrders,
-    };
-    console.log("body: ");
-    console.log(body);
-
-////
-
-   /* const xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://my-json-server.typicode.com/mikelangelo/pizzaJson/orders");
-    xhr.setRequestHeader("Content-type", "application/json");
-    xhr.send(JSON.stringify(body));
-    xhr.onload = function () {
-        console.log(xhr.response);
-        // ordObjDiv.innerHTML = JSON.stringify(JSON.parse(xhr.response), null, 2);
-        ordObjDiv.innerHTML = xhr.response;
-    };*/
-    const xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://my-json-server.typicode.com/mikelangelo/pizzaJson/orders");
-    xhr.setRequestHeader("Content-type", "application/json");
-    xhr.send(JSON.stringify(body));
-    xhr.onload = function () {
-       
-            console.log(JSON.parse(xhr.responseText));
-        
-    };
-}
- 
-//////// FIX ERROR MESSAGE PLEAAAASEEE
+} */
