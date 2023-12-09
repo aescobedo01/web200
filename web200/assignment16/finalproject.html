@@ -135,7 +135,7 @@ to implement each type of processing, and include error handling for
 
                     <hr class="space">
 
-                    <button type="button" class="buttondesign" onclick="addPizza()">+ Add pizza</button>
+                    <button type="button" id="pizzaGalore" class="buttondesign" onclick="addPizza()">+ Add pizza</button>
 
                 <!--add pizza button
                 pick size
@@ -147,12 +147,8 @@ to implement each type of processing, and include error handling for
                     <label for="instructions" class="designtemplate">Special intructions for delivery driver</label>
                     <textarea name="instructions" class="designtemplate"></textarea>
 
-                    <button id="myBtn" class="buttondesign" type="submit">Submit</button>
-
                 </form>
-
             </div>
-
             <!--subtotal including 10% tax
                 add pizza description
             dynamically change as more pizzaz are added-->
@@ -162,7 +158,10 @@ to implement each type of processing, and include error handling for
                 <p id="pizzaTotals">price per pizza</p>
                 <p id="taxesCost">tax</p>
                 <p id="totalCostPizzas">total</p>
+                <button id="myBtn" class="buttondesign button2" type="submit">Submit</button>
             </div>
+            
+            <p class="footer" id="errors"></p>
         </div>
     </main>
 </body>

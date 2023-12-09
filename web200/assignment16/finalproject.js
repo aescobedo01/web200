@@ -72,3 +72,81 @@ function updatePrice() {
     let grandTotal = totalCost + tax;
     document.getElementById("totalCostPizzas").innerText = `Grand Total: $${grandTotal.toFixed(2)}`;
 }
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+document.getElementById("pizzaGalore").addEventListener("click", submitAddPizzaForm);
+document.getElementById("myBtn").addEventListener("click", confirmOrder);
+let customerData = {}; 
+let pizzaOrders = [];
+    const errorsDiv = document.getElementById("errors");
+   // const ordObjDiv = document.getElementById("ord-object");
+
+function submitAddPizzaForm(e) {
+    e.preventDefault(); // prevents form from being submitted causing a page refresh
+    let formData = new FormData(form);
+    let checkedToppings = [];
+    let size;
+    // loop through all form input fields
+    formData.forEach(function (value, key) {
+        if (key === "toppings") {
+            checkedToppings.push(value);
+        } else {
+            if (key === "size") {
+                size = value;
+            } 
+        }
+    });
+
+    // if there's customer data from the form...
+    // console.log(checkedToppings.length);
+    if (customerData) {
+        errorsDiv.innerHTML = "";
+        if (checkedToppings.length > 0) {
+            const total = calculatePrice(checkedToppings, size);
+            console.log("toppings: " + checkedToppings);
+            
+            addPizza(size, checkedToppings, total.total);
+            displayOrders();
+            init();
+        } else {
+            errorsDiv.innerHTML = "Please select at least one topping.";
+        }
+    } else {
+        errorsDiv.innerHTML = errors;
+    }
+}
+
+
+function confirmOrder() {
+    // order confirmation body of customer info and pizza info
+    const body = {
+      customer: customerData,
+      pizzas: pizzaOrders,
+    };
+    console.log("body: ");
+    console.log(body);
+
+////
+
+   /* const xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://my-json-server.typicode.com/mikelangelo/pizzaJson/orders");
+    xhr.setRequestHeader("Content-type", "application/json");
+    xhr.send(JSON.stringify(body));
+    xhr.onload = function () {
+        console.log(xhr.response);
+        // ordObjDiv.innerHTML = JSON.stringify(JSON.parse(xhr.response), null, 2);
+        ordObjDiv.innerHTML = xhr.response;
+    };*/
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://my-json-server.typicode.com/mikelangelo/pizzaJson/orders");
+    xhr.setRequestHeader("Content-type", "application/json");
+    xhr.send(JSON.stringify(body));
+    xhr.onload = function () {
+       
+            console.log(JSON.parse(xhr.responseText));
+        
+    };
+}
+ 
+//////// FIX ERROR MESSAGE PLEAAAASEEE

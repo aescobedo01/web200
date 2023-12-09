@@ -90,7 +90,6 @@ ul
   border: 1.5px solid white;
   background-color: rgb(171, 182, 167);
   height: 50px;
-  width: 25%;
   margin: 3em auto;
   cursor: pointer;
   font-family: commuters-sans, sans-serif;
@@ -101,6 +100,14 @@ ul
   letter-spacing: 0.15em;
   text-transform: uppercase;
   line-height: 130%;
+}
+
+.button2 {
+  width: 60%;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  left: 20%;
 }
 
 .space {
@@ -151,23 +158,6 @@ td {
 #result {
   font-size: 25px;
 }
-
-/* Create two equal columns that floats next to each other */
-
-/*div.pizza {
-  margin: 0px;
-  border: 3px green solid;
-  inline-size: 50em;
-}
-
-.pizza2 {
-  inline-size: 300px;
-  margin: 0px;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  border: 3px green solid;
-}*/
 
 .pizza2 {
   position: fixed;
