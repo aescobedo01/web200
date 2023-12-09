@@ -52,17 +52,23 @@ function addPizza() {
 }
 
 function updatePrice() {
-    let size = document.querySelector(`input[name="size${pizzaNumber}"]:checked`).value;
-    let toppings = document.querySelectorAll(`input[name="topping${pizzaNumber}"]:checked`);
+    totalCost = 0; //cost reset
+    let pizzaDeets = document.getElementById("pizzaDeets");
+    pizzaDeets.innerHTML = ""; //remove previous pizza deets
+    for (let i = 1; i <= pizzaCount; i++) {
+
+    let size = document.querySelector(`input[name="size${i}"]:checked`).value;
+    let toppings = document.querySelectorAll(`input[name="topping${i}"]:checked`);
     let pizzaPrice = sizeprice[size] + toppings.length * toppingprice[size];
     totalCost += pizzaPrice;
-    console.log(`Pizza ${pizzaNumber}: Size - ${size}, Toppings - ${toppings.length}, Price - ${pizzaPrice}`);
+    console.log(`Pizza ${i}: Size - ${size}, Toppings - ${toppings.length}, Price - ${pizzaPrice}`);
+
+    //add the details of the pizzza to pizzaDeets
+    pizzaDeets.innerHTML += `<p>Pizza ${i}: ${size}, ${toppings.length} toppings, $${pizzaPrice.toFixed(2)}</p>`;
+    }
     document.getElementById("pizzaTotals").innerText = `Base Price: $${totalCost.toFixed(2)}`;
     let tax = totalCost * 0.10;
     document.getElementById("taxesCost").innerText = `Sales Tax: $${tax.toFixed(2)}`;
     let grandTotal = totalCost + tax;
     document.getElementById("totalCostPizzas").innerText = `Grand Total: $${grandTotal.toFixed(2)}`;
 }
-
-// Call addPizza once to add the first pizza form
-addPizza();
