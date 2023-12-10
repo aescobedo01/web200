@@ -13,7 +13,8 @@ let toppingprice = {
     medium: 1.50,
     large: 2.50
 };
-//created form inside javascript to appear when the addpizza button is clicked
+
+//form appears when the addpizza button is clicked
 function addPizza() {
     pizzaCount++;
     let pizzaForm = document.getElementById("pizzaForm");
@@ -30,22 +31,22 @@ function addPizza() {
         '<label for="large">Large 16"</label>' +
 
         '<p>Toppings</p>' +
-        '<div class="checkboxContainer"><input type="checkbox" id="0' + pizzaCount + '" name="topping' + pizzaCount + '" value="cheese" onClick="updatePrice(' + pizzaCount + ')">' +
-        '<label for="0">Cheese</label>' +
-        '<input type="checkbox" id="1' + pizzaCount + '" name="topping' + pizzaCount + '" value="ham" onClick="updatePrice(' + pizzaCount + ')">' +
-        '<label for="1">Ham</label></div>' +
-        '<div class="checkboxContainer"><input type="checkbox" id="2' + pizzaCount + '" name="topping' + pizzaCount + '" value="jalapeno" onClick="updatePrice(' + pizzaCount + ')">' +
-        '<label for="2">Jalapeno</label>' +
-        '<input type="checkbox" id="3' + pizzaCount + '" name="topping' + pizzaCount + '" value="onion" onClick="updatePrice(' + pizzaCount + ')">' +
-        '<label for="3">Onion</label></div>' +
-        '<div class="checkboxContainer"><input type="checkbox" id="4' + pizzaCount + '" name="topping' + pizzaCount + '" value="pineapple" onClick="updatePrice(' + pizzaCount + ')">' +
-        '<label for="4">Pineapple</label>' +
-        '<input type="checkbox" id="5' + pizzaCount + '" name="topping' + pizzaCount + '" value="pepperoni" onClick="updatePrice(' + pizzaCount + ')">' +
-        '<label for="5">Pepperoni</label></div>' +
-        '<div class="checkboxContainer"><input type="checkbox" id="6' + pizzaCount + '" name="topping' + pizzaCount + '" value="spinach" onClick="updatePrice(' + pizzaCount + ')">' +
-        '<label for="6">Spinach</label>' +
-        '<input type="checkbox" id="7' + pizzaCount + '" name="topping' + pizzaCount + '" value="mushroom" onClick="updatePrice(' + pizzaCount + ')">' +
-        '<label for="7">Mushroom</label></div>' +
+        '<div class="checkboxContainer"><input class="inputalign" type="checkbox" id="0' + pizzaCount + '" name="topping' + pizzaCount + '" value="cheese" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<label class="labelalign" for="0">Cheese</label>' +
+        '<input class="inputalign" type="checkbox" id="1' + pizzaCount + '" name="topping' + pizzaCount + '" value="ham" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<label class="labelalign" for="1">Ham</label></div>' +
+        '<div class="checkboxContainer"><input class="inputalign" type="checkbox" id="2' + pizzaCount + '" name="topping' + pizzaCount + '" value="jalapeno" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<label class="labelalign" for="2">Jalapeno</label>' +
+        '<input class="inputalign" type="checkbox" id="3' + pizzaCount + '" name="topping' + pizzaCount + '" value="onion" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<label class="labelalign" for="3">Onion</label></div>' +
+        '<div class="checkboxContainer"><input class="inputalign" type="checkbox" id="4' + pizzaCount + '" name="topping' + pizzaCount + '" value="pineapple" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<label class="labelalign" for="4">Pineapple</label>' +
+        '<input class="inputalign" type="checkbox" id="5' + pizzaCount + '" name="topping' + pizzaCount + '" value="pepperoni" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<label class="labelalign" for="5">Pepperoni</label></div>' +
+        '<div class="checkboxContainer"><input class="inputalign" type="checkbox" id="6' + pizzaCount + '" name="topping' + pizzaCount + '" value="spinach" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<label class="labelalign" for="6">Spinach</label>' +
+        '<input type="checkbox" class="inputalign" id="7' + pizzaCount + '" name="topping' + pizzaCount + '" value="mushroom" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<label class="labelalign" for="7">Mushroom</label></div>' +
 
 
         '<div id="errors' + pizzaCount + '"></div>' +
@@ -63,7 +64,7 @@ function addPizza() {
             let sizeSelected = Array.from(sizeRadios).some(radio => radio.checked);
             if (!sizeSelected) {
                 errorsDiv.innerHTML = "You must select a size before choosing toppings.";
-                this.checked = false; // Uncheck the topping
+                this.checked = false; // uncheck topping
             }
         });
     });
@@ -89,16 +90,16 @@ function updatePrice() {
         totalCost += pizzaPrice;
         console.log(`Pizza ${i}: Size - ${size}, Toppings - ${toppings.length}, Price - ${pizzaPrice}`);
 
-        //add the details of the pizzza to pizzaDeets
+        //add the details of the pizza to pizzaDeets
         pizzaDeets.innerHTML += `<p>Pizza ${i}: ${size}, ${toppings.length} toppings, $${pizzaPrice.toFixed(2)}</p>`;
     }
 
     //price
-    document.getElementById("pizzaTotals").innerText = `Base Price: $${totalCost.toFixed(2)}`;
+    document.getElementById("pizzaTotals").innerText = `Price: $${totalCost.toFixed(2)}`;
     let tax = totalCost * 0.10;
-    document.getElementById("taxesCost").innerText = `Sales Tax: $${tax.toFixed(2)}`;
+    document.getElementById("taxesCost").innerText = `Sales tax: $${tax.toFixed(2)}`;
     let grandTotal = totalCost + tax;
-    document.getElementById("totalCostPizzas").innerText = `Grand Total: $${grandTotal.toFixed(2)}`;
+    document.getElementById("totalCostPizzas").innerText = `Total: $${grandTotal.toFixed(2)}`;
 }
 
 

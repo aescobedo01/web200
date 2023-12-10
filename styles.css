@@ -156,11 +156,12 @@ td {
   background: rgb(120, 130, 116);
   inline-size: 230px;
   overflow-x: hidden;
+  overflow: scroll;
   text-decoration: none;
   font-size: 25px;
   color: whitesmoke;
   width: 300px;
-  height: 580px;
+  max-height: 580px;
   top: 20%;
   left: 15%;
   margin-top: -100px;
@@ -190,6 +191,7 @@ h1.pizza {
 
 div.checkboxContainer {
   margin-top: 0;
+  display: inline-block;
 }
 
 .button2 {
@@ -198,6 +200,25 @@ div.checkboxContainer {
   position: absolute;
   bottom: 10px;
   left: 20%;
+}
+
+.inputalign {
+  width: 20px;
+
+  position: relative;
+  left: 200px;
+
+  vertical-align: middle;
+}
+
+.labelalign {  
+  width: 200px;
+
+  position: relative;
+  left: -20px;
+
+  display: inline-block;
+  vertical-align: middle;
 }
 
 @media screen and (max-height: 450px) {
