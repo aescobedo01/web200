@@ -96,8 +96,10 @@ function updatePrice() {
 
     //price
     document.getElementById("pizzaTotals").innerText = `Price: $${totalCost.toFixed(2)}`;
+    // 10% tax
     let tax = totalCost * 0.10;
     document.getElementById("taxesCost").innerText = `Sales tax: $${tax.toFixed(2)}`;
+    //total
     let grandTotal = totalCost + tax;
     document.getElementById("totalCostPizzas").innerText = `Total: $${grandTotal.toFixed(2)}`;
 }
