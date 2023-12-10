@@ -27,46 +27,48 @@ function addPizza() {
         '<input type="radio" id="mediumSize' + pizzaCount + '" name="size' + pizzaCount + '" value="medium" onClick="updatePrice(' + pizzaCount + ')">' +
         '<label for="medium">Medium 14"</label><br>' +
         '<input type="radio" id="largeSize' + pizzaCount + '" name="size' + pizzaCount + '" value="large" onClick="updatePrice(' + pizzaCount + ')">' +
-        '<label for="large">Large 16"</label><br>' +
+        '<label for="large">Large 16"</label>' +
 
-        '<div class="footer" id="errors' + pizzaCount + '"></div>' +
-
-        '<span class="designtemplate">Toppings</span>' +
-        '<div class="mypizza"><input type="checkbox" id="0' + pizzaCount + '" name="topping' + pizzaCount + '" value="cheese" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<p>Toppings</p>' +
+        '<div class="checkboxContainer"><input type="checkbox" id="0' + pizzaCount + '" name="topping' + pizzaCount + '" value="cheese" onClick="updatePrice(' + pizzaCount + ')">' +
         '<label for="0">Cheese</label>' +
         '<input type="checkbox" id="1' + pizzaCount + '" name="topping' + pizzaCount + '" value="ham" onClick="updatePrice(' + pizzaCount + ')">' +
         '<label for="1">Ham</label></div>' +
-        '<div class="mypizza"><input type="checkbox" id="2' + pizzaCount + '" name="topping' + pizzaCount + '" value="jalapeno" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<div class="checkboxContainer"><input type="checkbox" id="2' + pizzaCount + '" name="topping' + pizzaCount + '" value="jalapeno" onClick="updatePrice(' + pizzaCount + ')">' +
         '<label for="2">Jalapeno</label>' +
         '<input type="checkbox" id="3' + pizzaCount + '" name="topping' + pizzaCount + '" value="onion" onClick="updatePrice(' + pizzaCount + ')">' +
         '<label for="3">Onion</label></div>' +
-        '<div><input type="checkbox" id="4' + pizzaCount + '" name="topping' + pizzaCount + '" value="pineapple" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<div class="checkboxContainer"><input type="checkbox" id="4' + pizzaCount + '" name="topping' + pizzaCount + '" value="pineapple" onClick="updatePrice(' + pizzaCount + ')">' +
         '<label for="4">Pineapple</label>' +
         '<input type="checkbox" id="5' + pizzaCount + '" name="topping' + pizzaCount + '" value="pepperoni" onClick="updatePrice(' + pizzaCount + ')">' +
         '<label for="5">Pepperoni</label></div>' +
-        '<div><input type="checkbox" id="6' + pizzaCount + '" name="topping' + pizzaCount + '" value="spinach" onClick="updatePrice(' + pizzaCount + ')">' +
+        '<div class="checkboxContainer"><input type="checkbox" id="6' + pizzaCount + '" name="topping' + pizzaCount + '" value="spinach" onClick="updatePrice(' + pizzaCount + ')">' +
         '<label for="6">Spinach</label>' +
         '<input type="checkbox" id="7' + pizzaCount + '" name="topping' + pizzaCount + '" value="mushroom" onClick="updatePrice(' + pizzaCount + ')">' +
         '<label for="7">Mushroom</label></div>' +
+
+
+        '<div id="errors' + pizzaCount + '"></div>' +
+
         '<button type="button" class="buttondesign" onclick="addPizza()">Add Another Pizza</button>';
 
     pizzaForm.appendChild(newForm);
 
-//error message pops up when user tries selecting topping without selecting size first
-let errorsDiv = document.getElementById("errors" + pizzaCount);
+    //error message pops up when user tries selecting topping without selecting size first
+    let errorsDiv = document.getElementById("errors" + pizzaCount);
 
-newForm.querySelectorAll('input[name^="topping"]').forEach(function(toppingCheckbox) {
-    toppingCheckbox.addEventListener('change', function() {
-        let sizeRadios = newForm.querySelectorAll('input[name^="size"]');
-        let sizeSelected = Array.from(sizeRadios).some(radio => radio.checked);
-        if (!sizeSelected) {
-            errorsDiv.innerHTML = "Please select a size before choosing toppings.";
-            this.checked = false; // Uncheck the topping
-        }
+    newForm.querySelectorAll('input[name^="topping"]').forEach(function (toppingCheckbox) {
+        toppingCheckbox.addEventListener('change', function () {
+            let sizeRadios = newForm.querySelectorAll('input[name^="size"]');
+            let sizeSelected = Array.from(sizeRadios).some(radio => radio.checked);
+            if (!sizeSelected) {
+                errorsDiv.innerHTML = "You must select a size before choosing toppings.";
+                this.checked = false; // Uncheck the topping
+            }
+        });
     });
-});
 
-//call updateprice function
+    //call updateprice function
     updatePrice();
 }
 
