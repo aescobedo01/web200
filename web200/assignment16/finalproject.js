@@ -119,6 +119,7 @@ function submitAddPizzaForm(e) {
     let formData = new FormData(form);
     let checkedToppings = [];
     let size;
+    
     // loop through all form input fields
     formData.forEach(function (value, key) {
         if (key === "toppings") {
@@ -129,10 +130,19 @@ function submitAddPizzaForm(e) {
             }
         }
     });
+
+    let pizza = { size: size, toppings: checkedToppings };
+    pizzaOrders.push(pizza);
 }
 
 // order confirmation body of customer info and pizza info
 function confirmOrder() {
+
+    let order = {
+        customer: customerData,
+        pizzas: pizzaOrders,
+    };
+
     const body = {
         customer: customerData,
         pizzas: pizzaOrders,
@@ -149,4 +159,26 @@ function confirmOrder() {
         console.log(JSON.parse(xhr.responseText));
 
     };
+}
+
+function validateOrder(order) {
+    if (!order.customer) {
+        console.error("Customer information is missing.");
+        return false;
+    }
+    if (!order.pizzas || order.pizzas.length === 0) {
+        console.error("No pizzas in the order.");
+        return false;
+    }
+    for (let pizza of order.pizzas) {
+        if (!pizza.size) {
+            console.error("Pizza size is missing.");
+            return false;
+        }
+        if (!pizza.toppings) {
+            console.error("Pizza toppings are missing.");
+            return false;
+        }
+    }
+    return true;
 }
