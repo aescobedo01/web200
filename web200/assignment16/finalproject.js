@@ -161,6 +161,7 @@ function confirmOrder() {
     };
 }
 
+//error messages using if statements
 function validateOrder(order) {
     if (!order.customer) {
         console.error("Customer information is missing.");
