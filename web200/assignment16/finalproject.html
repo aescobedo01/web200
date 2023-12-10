@@ -133,19 +133,21 @@ to implement each type of processing, and include error handling for
                     <input type="text" name="phonenumber" id="phoneNumber" placeholder="Phone Number"
                         required="required" class="userresponse space ">
 
-                    <button type="button" id="pizzaGalore" class="buttondesign" onclick="addPizza()">+ Add pizza</button>
+                    <button type="button" id="pizzaGalore" class="buttondesign" onclick="addPizza()">+ Add
+                        pizza</button>
 
-                <!--add pizza button
+                    <!--add pizza button
                 pick size
                 checkbox toppings
                  -->
                     <p id="pizzaForm"></p>
 
                     <!--special instructions-->
-                    <label for="instructions" class="designtemplate">Special intructions for delivery driver</label>
+                    <label for="instructions" class="designtemplate">Special instructions for delivery driver</label>
                     <textarea name="instructions" class="designtemplate"></textarea>
 
                 </form>
+
             </div>
             <!--subtotal including 10% tax
                 add pizza description
@@ -156,10 +158,14 @@ to implement each type of processing, and include error handling for
                 <p id="pizzaTotals"></p>
                 <p id="taxesCost"></p>
                 <p id="totalCostPizzas"></p>
-                <button id="myBtn" class="buttondesign button2" type="submit">Submit</button>
             </div>
-            
+
         </div>
+
+        <div class="pizza">
+            <button id="myBtn" class="buttondesign submitorder" type="submit">Submit</button>
+        </div>
+
     </main>
 </body>
 

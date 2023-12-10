@@ -49,7 +49,7 @@ function addPizza() {
         '<label class="labelalign" for="7">Mushroom</label></div>' +
 
 
-        '<div id="errors' + pizzaCount + '"></div>' +
+        '<div class="errors" id="errors' + pizzaCount + '"></div>' +
 
         '<button type="button" class="buttondesign" onclick="addPizza()">Add Another Pizza</button>';
 
@@ -77,7 +77,7 @@ function addPizza() {
 ////////////////////////////////////////////////////////////////////
 
 
-// div showing the price breakdown and the pizza details (pizzadeets)
+// price breakdown and the pizza details (pizzadeets)
 function updatePrice() {
     totalCost = 0; //cost reset
     let pizzaDeets = document.getElementById("pizzaDeets");
@@ -101,7 +101,6 @@ function updatePrice() {
     let grandTotal = totalCost + tax;
     document.getElementById("totalCostPizzas").innerText = `Total: $${grandTotal.toFixed(2)}`;
 }
-
 
 //////////////////////////////////////////////////////////////////////////////////////
 

@@ -149,6 +149,11 @@ td {
   font-size: 25px;
 }
 
+
+
+
+
+
 /*pizza form final project all css*/
 
 .cart {
@@ -185,6 +190,11 @@ div.pizza {
   /* less space btwn title and form */
 }
 
+.submitorder {
+  margin-right: 35%;
+  width: 15%;
+}
+
 h1.pizza {
   margin-left: 280px;
 }
@@ -192,14 +202,6 @@ h1.pizza {
 div.checkboxContainer {
   margin-top: 0;
   display: inline-block;
-}
-
-.button2 {
-  width: 60%;
-  text-align: center;
-  position: absolute;
-  bottom: 10px;
-  left: 20%;
 }
 
 .inputalign {
@@ -219,6 +221,11 @@ div.checkboxContainer {
 
   display: inline-block;
   vertical-align: middle;
+}
+
+.errors {
+  color:rgb(247, 0, 0);
+font-size: 23px;
 }
 
 @media screen and (max-height: 450px) {
