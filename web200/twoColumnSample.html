@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Columns</title>
+  <style>
+    main{
+      border: 3px solid red;
+      display:flex;
+    }
+    .leftCol{
+      border: 1px solid blue;
+      margin: 5px;
+      width: 300px;
+      flex: 0 0 100px;
+    }
+    .rightCol{
+      border: 1px solid green;
+      margin: 5px;
+      width: 100%;
+      min-height: 250px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="leftCol">Left</div>
+    <div class="rightCol">Right</div>
+  </main>
+</body>
+</html>
