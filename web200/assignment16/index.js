@@ -186,7 +186,7 @@ function validateOrder(order) {
     return true;
 }
 
-//custy object
+//customer info
 
 let userForm = document.querySelectorAll('#form .userresponse');
 let stateInteracted = false;
