@@ -51,7 +51,7 @@ function addPizza() {
 
         '<div class="errors" id="errors' + pizzaCount + '"></div>' +
 
-        '<button type="button" class="buttondesign" onclick="addPizza()">Add Another Pizza</button>';
+        '<button type="button" class="buttondesign" id="myPizza" onclick="addPizza()">Add Another Pizza</button>';
 
     pizzaForm.appendChild(newForm);
 
@@ -183,28 +183,35 @@ function validateOrder(order) {
 
 //custy object
 
-document.getElementById('form').addEventListener('submit', function(event){
+let userForm = document.querySelectorAll('#form .userresponse');
+let stateInteracted = false;
+
+document.getElementById('stateList').addEventListener('change', function() {
+    stateInteracted = true;
+});
+
+function updateCustomerInfo() {
 
     let firstName = document.getElementById('firstName').value;
     let lastName = document.getElementById('lastName').value;
     let address = document.getElementById('userAddress').value;
     let zipCode = document.getElementById('zipCode').value;
     let city = document.getElementById('userCity').value;
-    let state = document.getElementById('stateList').value;
+    let state = stateInteracted ? document.getElementById('stateList').value : '';
     let phoneNumber = document.getElementById('phoneNumber').value;
-    
-    let customerInfo = {
-        'First Name': firstName,
-        'Last Name': lastName,
-        'Address': address,
-        'Zip Code': zipCode,
-        'City': city,
-        'State': state,
-        'Phone Number': phoneNumber
-    };
 
-    document.getElementById('customerInfo').textcontent = JSON.stringify(customerInfo, null, 2);
+    let names = firstName + ' ' + lastName;
+    let addressline = (address !== '' ? address : '') + (city !== '' ? ', ' + city : '') + (stateInteracted && state !== '' ? ', ' + state : '') + (zipCode !== '' ? ', ' + zipCode : '');
+    let phone = phoneNumber;
 
-    console.log(customerInfo);
+    let infoCusty = names + '<br>' + addressline + '<br>' + phone;
+
+
+    document.getElementById('customerInfo').innerHTML = infoCusty;
+
+    console.log(infoCusty);
 }
-);
+
+for (var i = 0; i < userForm.length; i++) {
+    userForm[i].addEventListener('input', updateCustomerInfo);
+}
