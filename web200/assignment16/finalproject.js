@@ -121,7 +121,7 @@ function submitAddPizzaForm(e) {
     let formData = new FormData(form);
     let checkedToppings = [];
     let size;
-    
+
     // loop through all form input fields
     formData.forEach(function (value, key) {
         if (key === "toppings") {
@@ -186,7 +186,7 @@ function validateOrder(order) {
 let userForm = document.querySelectorAll('#form .userresponse');
 let stateInteracted = false;
 
-document.getElementById('stateList').addEventListener('change', function() {
+document.getElementById('stateList').addEventListener('change', function () {
     stateInteracted = true;
 });
 
@@ -200,12 +200,14 @@ function updateCustomerInfo() {
     let state = stateInteracted ? document.getElementById('stateList').value : '';
     let phoneNumber = document.getElementById('phoneNumber').value;
 
-    let names = firstName + ' ' + lastName;
-    let addressline = (address !== '' ? address : '') + (city !== '' ? ', ' + city : '') + (stateInteracted && state !== '' ? ', ' + state : '') + (zipCode !== '' ? ', ' + zipCode : '');
-    let phone = phoneNumber;
+    let customer = {
+        name: firstName + ' ' + lastName,
+        address: (address !== '' ? address : '') + (city !== '' ? ', ' + city : '') + (stateInteracted && state !== '' ? ', ' + state : '') + (zipCode !== '' ? ', ' + zipCode : ''),
+        phone: phoneNumber
+    };
 
-    let infoCusty = names + '<br>' + addressline + '<br>' + phone;
-
+    // display the custy info
+    let infoCusty = customer.name + '<br>' + customer.address + '<br>' + customer.phone;
 
     document.getElementById('customerInfo').innerHTML = infoCusty;
 
