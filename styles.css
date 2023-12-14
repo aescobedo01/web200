@@ -58,14 +58,24 @@ a:visited {
   color: #1E130A;
 }
 
-div.content:hover {
+a:hover {
+color: rgb(225, 237, 219);
+}
+
+li:hover {
   background-color: #1E130A;
   color: rgb(225, 237, 219);
 }
 
-div.content:hover a {
-  color: rgb(225, 237, 219);
+/*
+.links:hover {
+  color: rgb(93, 99, 91);
 }
+
+.links:active {
+  background-color: #1E130A;
+}
+*/
 
 ul {
   list-style-type: none;

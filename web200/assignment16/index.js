@@ -140,17 +140,22 @@ function submitAddPizzaForm(e) {
 // order confirmation body of customer info and pizza info
 function confirmOrder() {
 
-    const body = {
+    const order = {
         customer: customerData,
         pizzas: pizzaOrders,
     };
-    console.log("body: ");
-    console.log(body);
+
+    if (!validateOrder(order)) {
+        return;
+    }
+
+    console.log("order: ");
+    console.log(order);
 
     const xhr = new XMLHttpRequest();
     xhr.open("POST", "https://my-json-server.typicode.com/mikelangelo/pizzaJson/orders");
     xhr.setRequestHeader("Content-type", "application/json");
-    xhr.send(JSON.stringify(body));
+    xhr.send(JSON.stringify(order));
     xhr.onload = function () {
 
         console.log(JSON.parse(xhr.responseText));
@@ -212,6 +217,7 @@ function updateCustomerInfo() {
     document.getElementById('customerInfo').innerHTML = infoCusty;
 
     console.log(infoCusty);
+    customerData = customer;
 }
 
 for (var i = 0; i < userForm.length; i++) {
