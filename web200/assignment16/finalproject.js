@@ -55,7 +55,7 @@ function addPizza() {
 
     pizzaForm.appendChild(newForm);
 
-    //error message pops up when user tries selecting topping without selecting size first
+    //error message pops up when user selects topping without selecting size first
     let errorsDiv = document.getElementById("errors" + pizzaCount);
 
     newForm.querySelectorAll('input[name^="topping"]').forEach(function (toppingCheckbox) {
@@ -115,7 +115,7 @@ let customerData = {};
 let pizzaOrders = [];
 
 
-//prevent form submission to be able to see the results in the console
+//prevent form submission ( to see the results in the console )
 function submitAddPizzaForm(e) {
     e.preventDefault(); // prevents submission
     let formData = new FormData(form);
@@ -139,11 +139,6 @@ function submitAddPizzaForm(e) {
 
 // order confirmation body of customer info and pizza info
 function confirmOrder() {
-
-    let order = {
-        customer: customerData,
-        pizzas: pizzaOrders,
-    };
 
     const body = {
         customer: customerData,
@@ -185,3 +180,31 @@ function validateOrder(order) {
     }
     return true;
 }
+
+//custy object
+
+document.getElementById('form').addEventListener('submit', function(event){
+
+    let firstName = document.getElementById('firstName').value;
+    let lastName = document.getElementById('lastName').value;
+    let address = document.getElementById('userAddress').value;
+    let zipCode = document.getElementById('zipCode').value;
+    let city = document.getElementById('userCity').value;
+    let state = document.getElementById('stateList').value;
+    let phoneNumber = document.getElementById('phoneNumber').value;
+    
+    let customerInfo = {
+        'First Name': firstName,
+        'Last Name': lastName,
+        'Address': address,
+        'Zip Code': zipCode,
+        'City': city,
+        'State': state,
+        'Phone Number': phoneNumber
+    };
+
+    document.getElementById('customerInfo').textcontent = JSON.stringify(customerInfo, null, 2);
+
+    console.log(customerInfo);
+}
+);
