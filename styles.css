@@ -181,10 +181,14 @@ td {
 .icon {
   display: flex;
   align-items: center;
-  margin-left: 25%;
+  margin-left: 50%;
   gap: 10px;
+  margin-top: auto;
 }
 
+.fa-xl {
+  font-size: 1.5em;
+}
 
 .bodypizzacolor{
   background-color: rgb(255, 238, 183);
@@ -206,10 +210,7 @@ div.pizza {
 
 #myBtn, #pizzaGalore, #myPizza {
   background-color: rgb(250, 214, 94);
-}
-
-h1.pizza {
-  margin-left: 280px;
+  text-shadow: 1px 1px 1px #000000;
 }
 
 div.checkboxContainer {
